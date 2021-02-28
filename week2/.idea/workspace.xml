@@ -4,28 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8a05aa8-b6ee-4137-8b65-da9a22b63999" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/p1/p1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/p2/p2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/p3/p3.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/p1/src/main/java/com/iquestgroup/remotelearning/week2/p1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/p1/src/main/java/com/iquestgroup/remotelearning/week2/p1/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/p1/src/main/java/com/iquestgroup/remotelearning/week2/p1/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/p1/src/main/java/com/iquestgroup/remotelearning/week2/p1/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/p2/src/main/java/com/iquestgroup/remotelearning/week2/p2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/p2/src/main/java/com/iquestgroup/remotelearning/week2/p2/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/p2/src/main/java/com/iquestgroup/remotelearning/week2/p2/Stackable.java" beforeDir="false" afterPath="$PROJECT_DIR$/p2/src/main/java/com/iquestgroup/remotelearning/week2/p2/Stackable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/p2/src/main/java/com/iquestgroup/remotelearning/week2/p2/Tank.java" beforeDir="false" afterPath="$PROJECT_DIR$/p2/src/main/java/com/iquestgroup/remotelearning/week2/p2/Tank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/p2/src/main/java/com/iquestgroup/remotelearning/week2/p2/TankObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/p2/src/main/java/com/iquestgroup/remotelearning/week2/p2/TankObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/p3/src/main/java/com/iquestgroup/remotelearning/week2/p3/Beacon.java" beforeDir="false" afterPath="$PROJECT_DIR$/p3/src/main/java/com/iquestgroup/remotelearning/week2/p3/Beacon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/p3/src/main/java/com/iquestgroup/remotelearning/week2/p3/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/p3/src/main/java/com/iquestgroup/remotelearning/week2/p3/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/p3/src/main/java/com/iquestgroup/remotelearning/week2/p3/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/p3/src/main/java/com/iquestgroup/remotelearning/week2/p3/Engine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/p3/src/main/java/com/iquestgroup/remotelearning/week2/p3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/p3/src/main/java/com/iquestgroup/remotelearning/week2/p3/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/p3/src/main/java/com/iquestgroup/remotelearning/week2/p3/PoliceCar.java" beforeDir="false" afterPath="$PROJECT_DIR$/p3/src/main/java/com/iquestgroup/remotelearning/week2/p3/PoliceCar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/p3/src/main/java/com/iquestgroup/remotelearning/week2/p3/SteeringWheel.java" beforeDir="false" afterPath="$PROJECT_DIR$/p3/src/main/java/com/iquestgroup/remotelearning/week2/p3/SteeringWheel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/p3/src/main/java/com/iquestgroup/remotelearning/week2/p3/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/p3/src/main/java/com/iquestgroup/remotelearning/week2/p3/Vehicle.java" afterDir="false" />
-    </list>
+    <list default="true" id="b8a05aa8-b6ee-4137-8b65-da9a22b63999" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,7 +19,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1ow6DnY3Ftd5G36sXAOEH17zSbu" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
