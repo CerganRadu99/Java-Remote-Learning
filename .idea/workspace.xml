@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e3af7fed-4f67-42fa-9383-4154197e730f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/week2/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week1" beforeDir="false" afterPath="$PROJECT_DIR$/week1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week1/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/week1/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week1/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/week1/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week1/.idea/libraries/Maven__commons_io_commons_io_2_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/week1/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/week1/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week1/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/week1/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/week1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week1/week1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/week1/week2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/week2" beforeDir="false" afterPath="$PROJECT_DIR$/week2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/week2/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/week2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week2/p2/src/main/java/com/iquestgroup/remotelearning/week2/p2/Stackable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/week2/p2/src/main/java/com/iquestgroup/remotelearning/week2/p2/Tank.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/week2/p2/src/main/java/com/iquestgroup/remotelearning/week2/p2/TankObject.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
+  <component name="ProjectId" id="1oZeHxg5jqINEjBTA7m7sDcYFRt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\cerga\IntellijUltimateWorkspace\java-remote-learning\week1\p1\src\main\resources\txt" />
+      <recent name="C:\Users\cerga\IntellijUltimateWorkspace\java-remote-learning\week1\p1\src\main\resources" />
+      <recent name="C:\Users\cerga\IntellijUltimateWorkspace\java-remote-learning\week1\p1" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.iquestgroup.remotelearning.week1.p4" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main (4)">
+    <configuration name="ConnectionManagerTester" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="App" />
+      <module name="p1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.iquestgroup.remotelearning.week1.p1.*" />
+          <option name="ENABLED" value="false" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.iquestgroup.remotelearning.week1.p2.Main" />
+      <module name="p2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.iquestgroup.remotelearning.week1.p2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.iquestgroup.remotelearning.week1.p3.Main" />
+      <module name="p3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.iquestgroup.remotelearning.week1.p3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.iquestgroup.remotelearning.week1.p4.Main" />
+      <module name="p4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.iquestgroup.remotelearning.week1.p4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.Main" />
+      <module name="p4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PrimeNumbersDetector" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.iquestgroup.remotelearning.week1.p2.PrimeNumbersDetector" />
+      <module name="p2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.iquestgroup.remotelearning.week1.p2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="week1 [test]" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="test" />
+              </list>
+            </option>
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main (4)" />
+        <item itemvalue="Application.Main (3)" />
+        <item itemvalue="Application.Main (2)" />
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.PrimeNumbersDetector" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e3af7fed-4f67-42fa-9383-4154197e730f" name="Default Changelist" comment="" />
+      <created>1613498459516</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1613498459516</updated>
+      <workItem from="1613498461336" duration="168000" />
+      <workItem from="1613498756240" duration="23054000" />
+      <workItem from="1613522753554" duration="7000" />
+      <workItem from="1613580270147" duration="3987000" />
+      <workItem from="1613587249614" duration="3789000" />
+      <workItem from="1613591079005" duration="689000" />
+      <workItem from="1613591786171" duration="454000" />
+      <workItem from="1613592269051" duration="2318000" />
+      <workItem from="1613594623752" duration="1961000" />
+      <workItem from="1613596618797" duration="9553000" />
+      <workItem from="1613610028761" duration="6022000" />
+      <workItem from="1613616115614" duration="1297000" />
+      <workItem from="1613617440880" duration="542000" />
+      <workItem from="1613618008013" duration="1010000" />
+      <workItem from="1613619050763" duration="568000" />
+      <workItem from="1613619739042" duration="139000" />
+      <workItem from="1613635626067" duration="105000" />
+      <workItem from="1613641705502" duration="1520000" />
+      <workItem from="1613643271339" duration="10786000" />
+      <workItem from="1613995228538" duration="31429000" />
+      <workItem from="1614085332447" duration="28000" />
+      <workItem from="1614098054766" duration="1043000" />
+      <workItem from="1614105478937" duration="1000" />
+      <workItem from="1614170943417" duration="3415000" />
+      <workItem from="1614174569510" duration="14000" />
+      <workItem from="1614186882429" duration="1031000" />
+      <workItem from="1614521802615" duration="546000" />
+      <workItem from="1614523679824" duration="13000" />
+      <workItem from="1614523921594" duration="8000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
