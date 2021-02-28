@@ -1,5 +1,8 @@
 package com.iquestgroup.remotelearning.week1.p2;
 
+import com.iquestgroup.remotelearning.week1.p2.models.PrimeNumbersDetector;
+
+
 public class Main {
 
   public static void main(String[] args) {

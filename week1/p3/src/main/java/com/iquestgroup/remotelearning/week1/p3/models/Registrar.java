@@ -1,10 +1,10 @@
-package com.iquestgroup.remotelearning.week1.p3;
+package com.iquestgroup.remotelearning.week1.p3.models;
 
 public class Registrar {
 
   private final Registry registry;
 
-  Registrar(Registry registry) {
+  public Registrar(Registry registry) {
     this.registry = registry;
   }
 

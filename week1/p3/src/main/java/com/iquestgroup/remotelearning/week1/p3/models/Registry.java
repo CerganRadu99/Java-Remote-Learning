@@ -1,4 +1,4 @@
-package com.iquestgroup.remotelearning.week1.p3;
+package com.iquestgroup.remotelearning.week1.p3.models;
 
 import java.util.HashMap;
 
@@ -6,7 +6,7 @@ public class Registry {
 
   private HashMap<String, Domain> domains;
 
-  Registry() {
+  public Registry() {
     domains = new HashMap<String, Domain>();
   }
 

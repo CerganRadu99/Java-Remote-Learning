@@ -1,4 +1,4 @@
-package com.iquestgroup.remotelearning.week1.p4;
+package com.iquestgroup.remotelearning.week1.p4.models;
 
 public class ConnectionManager {
 
@@ -12,6 +12,12 @@ public class ConnectionManager {
     connectionObjects = new Connection[numberOfConnectionObjects];
     index = 0;
     createConnectionObjects();
+  }
+
+  public class Connection {
+
+    private Connection() {
+    }
   }
 
   public static ConnectionManager access(int noConnectionObjects) {
@@ -41,7 +47,7 @@ public class ConnectionManager {
 
   private void createConnectionObjects() {
     for (int i = 0; i < getNumberOfConnectionObjects(); i++) {
-      connectionObjects[i] = Connection.getConnection();
+      connectionObjects[i] = new Connection();
     }
   }
 }

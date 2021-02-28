@@ -1,4 +1,4 @@
-package com.iquestgroup.remotelearning.week1.p3;
+package com.iquestgroup.remotelearning.week1.p3.models;
 
 public class Domain {
 
@@ -7,7 +7,7 @@ public class Domain {
   private String ownerCnp;
   private String host;
 
-  Domain(String domainName, String ownerName, String ownerCnp, String host) {
+  public Domain(String domainName, String ownerName, String ownerCnp, String host) {
     this.domainName = domainName;
     this.ownerName = ownerName;
     this.ownerCnp = ownerCnp;

@@ -1,4 +1,4 @@
-package com.iquestgroup.remotelearning.week1.p1;
+package com.iquestgroup.remotelearning.week1.p1.models;
 
 public class Personality {
 
@@ -7,14 +7,14 @@ public class Personality {
   private final int dateOfBirth;
   private int dateOfDeath;
 
-  Personality(String firstName, String lastName, int dateOfBirth) {
+  public Personality(String firstName, String lastName, int dateOfBirth) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.dateOfBirth = dateOfBirth;
     this.dateOfDeath = 0;
   }
 
-  Personality(String firstName, String lastName, int dateOfBirth, int dateOfDeath) {
+  public Personality(String firstName, String lastName, int dateOfBirth, int dateOfDeath) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.dateOfBirth = dateOfBirth;

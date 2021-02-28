@@ -1,10 +1,10 @@
-package com.iquestgroup.remotelearning.week1.p2;
+package com.iquestgroup.remotelearning.week1.p2.models;
 
 public class PrimeNumbersDetector implements NumbersPrinter, PrimeChecker {
 
   private int upperLimit;
 
-  PrimeNumbersDetector(int upperLimit) {
+  public PrimeNumbersDetector(int upperLimit) {
     this.upperLimit = upperLimit;
   }
 
@@ -14,12 +14,20 @@ public class PrimeNumbersDetector implements NumbersPrinter, PrimeChecker {
 
   @Override
   public boolean isPrime(int currentNumber) {
-    for (int possibleDivider = 2; possibleDivider <= currentNumber / 2; possibleDivider++) {
+    if (currentNumber <= 1) {
+      return false;
+    } else if (currentNumber == 2) {
+      return true;
+    } else if (currentNumber % 2 == 0) {
+      return false;
+    }
+    for (int possibleDivider = 3; possibleDivider <= Math.sqrt(currentNumber);
+        possibleDivider += 2) {
       if (currentNumber % possibleDivider == 0) {
-        return true;
+        return false;
       }
     }
-    return false;
+    return true;
   }
 
   @Override

@@ -1,4 +1,4 @@
-package com.iquestgroup.remotelearning.week1.p3;
+package com.iquestgroup.remotelearning.week1.p3.models;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ public class Customer {
   private final Reseller reseller;
   private List<Domain> domains;
 
-  Customer(Reseller reseller) {
+  public Customer(Reseller reseller) {
     this.reseller = reseller;
     domains = new ArrayList<Domain>();
   }

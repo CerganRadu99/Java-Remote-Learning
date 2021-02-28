@@ -1,5 +1,6 @@
-package com.iquestgroup.remotelearning.week1.p1;
+package com.iquestgroup.remotelearning.week1.p1.models;
 
+import com.iquestgroup.remotelearning.week1.p1.models.Personality;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -7,14 +8,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.HashSet;
 
-public class App {
+public class PersonProcessor {
 
   private static final int FIRST_PERSONAL_DATA = 0;
   private static final int SECOND_PERSONAL_DATA = 1;
   private static final int THIRD_PERSONAL_DATA = 2;
   private static final int FORTH_PERSONAL_DATA = 3;
+  private static final int LENGTH_IF_PERSON_IS_ALIVE = 4;
+  private static final int LENGTH_IF_PERSON_IS_DEAD = 3;
 
-  App() {
+  public PersonProcessor() {
 
   }
 
@@ -24,16 +27,12 @@ public class App {
     }
   }
 
-  public HashSet<Personality> filterOutDuplicatedEntries(List<Personality> personalities) {
-    return new HashSet<>(personalities);
-  }
-
-  public ArrayList<Personality> storeInformation(List<String> fileLineByLine) {
-    ArrayList<Personality> personalities = new ArrayList<>();
+  public HashSet<Personality> filterOutDuplicatedEntries(List<String> fileLineByLine) {
+    HashSet<Personality> personalities = new HashSet<Personality>();
     for (String line : fileLineByLine) {
       String[] personalData = line.split(",");
       switch (personalData.length) {
-        case (4):
+        case (LENGTH_IF_PERSON_IS_ALIVE):
           try {
             int dateOfBirth = Integer
                 .parseInt(personalData[THIRD_PERSONAL_DATA].substring(SECOND_PERSONAL_DATA));
@@ -47,13 +46,14 @@ public class App {
             e.printStackTrace();
           }
           break;
-        case (3):
+        case (LENGTH_IF_PERSON_IS_DEAD):
           try {
             int dateOfBirth = Integer
                 .parseInt(personalData[THIRD_PERSONAL_DATA].substring(FORTH_PERSONAL_DATA));
             personalities
                 .add(new Personality(personalData[FIRST_PERSONAL_DATA],
-                    personalData[SECOND_PERSONAL_DATA].substring(SECOND_PERSONAL_DATA), dateOfBirth));
+                    personalData[SECOND_PERSONAL_DATA].substring(SECOND_PERSONAL_DATA),
+                    dateOfBirth));
           } catch (NumberFormatException e) {
             e.printStackTrace();
           }
@@ -80,10 +80,9 @@ public class App {
     return fileLineByLine;
   }
 
-  public void executeApp(InputStreamReader inputReader) {
+  public void execute(InputStreamReader inputReader) {
     List<String> fileLineByLine = readFileLineByLine(inputReader);
-    ArrayList<Personality> personalities = storeInformation(fileLineByLine);
-    HashSet<Personality> noDuplicatedPersonalities = filterOutDuplicatedEntries(personalities);
-    outputPersonalities(noDuplicatedPersonalities);
+    HashSet<Personality> personalities = filterOutDuplicatedEntries(fileLineByLine);
+    outputPersonalities(personalities);
   }
 }

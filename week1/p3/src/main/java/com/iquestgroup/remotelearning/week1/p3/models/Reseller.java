@@ -1,10 +1,10 @@
-package com.iquestgroup.remotelearning.week1.p3;
+package com.iquestgroup.remotelearning.week1.p3.models;
 
 public class Reseller {
 
   private Registrar registrar;
 
-  Reseller(Registrar registrar) {
+  public Reseller(Registrar registrar) {
     this.registrar = registrar;
   }
 
