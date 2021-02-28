@@ -72,12 +72,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.iquestgroup.remotelearning.week2.p3.Main" />
-      <module name="p3" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.java.com.iquestgroup.remotelearning.week2.p2.Main" />
+      <module name="week2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.iquestgroup.remotelearning.week2.p3.*" />
+          <option name="PATTERN" value="main.java.com.iquestgroup.remotelearning.week2.p2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -86,11 +86,37 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.java.com.iquestgroup.remotelearning.week2.p2.Main" />
-      <module name="week2" />
+      <option name="MAIN_CLASS_NAME" value="com.iquestgroup.remotelearning.week2.p1.Main" />
+      <module name="p1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="main.java.com.iquestgroup.remotelearning.week2.p2.*" />
+          <option name="PATTERN" value="com.iquestgroup.remotelearning.week2.p1.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.iquestgroup.remotelearning.week2.p2.Main" />
+      <module name="p2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.iquestgroup.remotelearning.week2.p2.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.iquestgroup.remotelearning.week2.p3.Main" />
+      <module name="p3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.iquestgroup.remotelearning.week2.p3.models.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
