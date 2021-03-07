@@ -8,7 +8,9 @@ import java.util.List;
 public class StringTitlelizer implements Titlelizer {
 
   private static final String STRING_DELIMITER = " ";
+  private static final String EMPTY_STRING = "";
   private static final int START_INDEX_FIRST_WORD = 0;
+  private static final int EQUAL_STRINGS = 0;
   private static final int END_INDEX_FIRST_WORD = 1;
   private static final String[] WORDS_TO_IGNORE = {"the", "a", "to", "in", "of", "this", "is"};
   private static final List<String> listWordsToIgnore = new ArrayList<>(
@@ -19,7 +21,7 @@ public class StringTitlelizer implements Titlelizer {
     if (toTitlelize == null) {
       throw new IllegalArgumentException("Parameter 'toTitlelize' cannot be null");
     }
-    if (toTitlelize.compareTo("") == 0) {
+    if (toTitlelize.compareTo(EMPTY_STRING) == EQUAL_STRINGS) {
       return toTitlelize;
     }
     if (isTitlelized(toTitlelize)) {
@@ -32,9 +34,9 @@ public class StringTitlelizer implements Titlelizer {
           currentToken, toTitlelize))) {
         stringBuilder.append(
             currentToken.substring(START_INDEX_FIRST_WORD, END_INDEX_FIRST_WORD).toUpperCase())
-            .append(currentToken.substring(END_INDEX_FIRST_WORD)).append(" ");
+            .append(currentToken.substring(END_INDEX_FIRST_WORD)).append(STRING_DELIMITER);
       } else {
-        stringBuilder.append(currentToken).append(" ");
+        stringBuilder.append(currentToken).append(STRING_DELIMITER);
       }
 
     }
