@@ -10,7 +10,7 @@ public class StringList implements List<String> {
   private static final int STRINGS_ARE_EQUAL = 0;
   private final java.util.List<String> operations = new ArrayList<>();
   private final String[] numbersAsStrings = new String[LIST_CAPACITY];
-  private static int indexNumber;
+  private int indexNumber;
 
   public StringList() {
     indexNumber = 0;
