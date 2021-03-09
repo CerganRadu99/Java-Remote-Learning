@@ -3,9 +3,9 @@ package com.iquestgroup.remotelearning.week2.p3.models;
 
 public class Vehicle {
 
-  protected int yearOfFabrication = getYearOfFabrication();
-  protected Engine engine = new Engine();
-  protected static String vehicleNumber = getVehicleNumber();
+  private int yearOfFabrication = getYearOfFabrication();
+  private Engine engine = new Engine();
+  private static String vehicleNumber = getVehicleNumber();
 
   public Vehicle() {
     System.out.println("Vehicle()");

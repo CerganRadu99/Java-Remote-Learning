@@ -2,8 +2,8 @@ package com.iquestgroup.remotelearning.week2.p3.models;
 
 public class Car extends Vehicle {
 
-  protected SteeringWheel steeringWheel = getSteeringWheel();
-  protected static int numberOfDoors = getNumberOfDoors();
+  private SteeringWheel steeringWheel = getSteeringWheel();
+  private static final int numberOfDoors = getNumberOfDoors();
 
   public Car() {
     super();
