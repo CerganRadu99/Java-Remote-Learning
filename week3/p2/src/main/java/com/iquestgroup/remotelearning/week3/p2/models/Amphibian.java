@@ -8,14 +8,6 @@ public class Amphibian {
     this.skin = skin;
   }
 
-  public Skin getSkin() {
-    return skin;
-  }
-
-  public void setSkin(Skin skin) {
-    this.skin = skin;
-  }
-
   public void eat() {
     System.out.println("Amphibian is eating...");
   }
