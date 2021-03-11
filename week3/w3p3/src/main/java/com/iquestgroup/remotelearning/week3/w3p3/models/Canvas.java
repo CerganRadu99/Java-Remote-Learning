@@ -11,14 +11,6 @@ public class Canvas extends CompositeShape {
     shapes = new ArrayList<Shape>();
   }
 
-  public List<Shape> getShapes() {
-    return shapes;
-  }
-
-  public void setShapes(List<Shape> shapes) {
-    this.shapes = shapes;
-  }
-
   @Override
   public void addToShape(Shape shape) {
     shapes.add(shape);

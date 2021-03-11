@@ -4,30 +4,17 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Line extends CompositeShape {
+public class Line implements Shape {
 
   private static final int MINIMUM_NUMBER_OF_POINTS = 2;
-  private Set<Shape> points;
+  private Set<Point> points;
 
-  public Line(Shape[] points) {
+  public Line(Point[] points) {
     if (points.length < MINIMUM_NUMBER_OF_POINTS) {
       throw new IllegalArgumentException("A line has at least two points !!!");
     } else {
-      this.points = new HashSet<Shape>(Arrays.asList(points));
+      this.points = new HashSet<>(Arrays.asList(points));
     }
-  }
-
-  public Set<Shape> getPoints() {
-    return points;
-  }
-
-  public void setPoints(Set<Shape> points) {
-    this.points = points;
-  }
-
-  @Override
-  public void addToShape(Shape shape) {
-    points.add(shape);
   }
 
   @Override
