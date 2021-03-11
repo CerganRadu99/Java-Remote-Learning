@@ -12,10 +12,12 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="p1" target="1.7" />
-      <module name="p2" target="1.7" />
-      <module name="p3" target="1.7" />
-      <module name="week2" target="1.7" />
+      <module name="p1" target="1.8" />
+      <module name="p2" target="1.8" />
+      <module name="p3" target="1.8" />
+      <module name="w2p2" target="1.7" />
+      <module name="w2p3" target="1.7" />
+      <module name="week2" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

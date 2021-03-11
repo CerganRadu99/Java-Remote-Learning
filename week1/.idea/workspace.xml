@@ -4,7 +4,49 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3af7fed-4f67-42fa-9383-4154197e730f" name="Default Changelist" comment="" />
+    <list default="true" id="e3af7fed-4f67-42fa-9383-4154197e730f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/p1/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/p1/src/main/java/com/iquestgroup/remotelearning/week1/p1/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/p1/src/main/java/com/iquestgroup/remotelearning/week1/p1/models/PersonProcessor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/p1/src/main/java/com/iquestgroup/remotelearning/week1/p1/models/Personality.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/p1/src/main/resources/W1P1input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/p1/src/test/java/com/iquestgroup/remotelearning/week1/p1/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/p2/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/p2/src/main/java/com/iquestgroup/remotelearning/week1/p2/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/p2/src/main/java/com/iquestgroup/remotelearning/week1/p2/models/NumbersPrinter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/p2/src/main/java/com/iquestgroup/remotelearning/week1/p2/models/PrimeChecker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/p2/src/main/java/com/iquestgroup/remotelearning/week1/p2/models/PrimeNumbersDetector.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/p2/src/test/java/com/iquestgroup/remotelearning/week1/p2/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/p3/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/p3/src/main/diagrams/ClassDiagramP3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/p3/src/main/diagrams/SequenceDiagramP3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/p3/src/main/java/com/iquestgroup/remotelearning/week1/p3/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/p3/src/main/java/com/iquestgroup/remotelearning/week1/p3/models/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/p3/src/main/java/com/iquestgroup/remotelearning/week1/p3/models/Domain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/p3/src/main/java/com/iquestgroup/remotelearning/week1/p3/models/Registrar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/p3/src/main/java/com/iquestgroup/remotelearning/week1/p3/models/Registry.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/p3/src/main/java/com/iquestgroup/remotelearning/week1/p3/models/Reseller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/p3/src/test/java/com/iquestgroup/remotelearning/week1/p3/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/p4/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/p4/src/main/java/com/iquestgroup/remotelearning/week1/p4/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/p4/src/main/java/com/iquestgroup/remotelearning/week1/p4/models/ConnectionManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/p4/src/test/java/com/iquestgroup/remotelearning/week1/p4/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../week2/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week2/week2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../week2/week2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week3/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../week3/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week5/p4/src/main/java/com/iquestgroup/remotelearning/week5/p4/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../week5/p4/src/main/java/com/iquestgroup/remotelearning/week5/p4/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week5/p4/src/main/java/com/iquestgroup/remotelearning/week5/p4/models/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/../week5/p4/src/main/java/com/iquestgroup/remotelearning/week5/p4/models/Display.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week5/p4/src/main/java/com/iquestgroup/remotelearning/week5/p4/models/PigLatinTranslator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../week5/p4/src/main/java/com/iquestgroup/remotelearning/week5/p4/models/PigLatinTranslator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week5/p4/src/main/java/com/iquestgroup/remotelearning/week5/p4/models/PigLatinTranslatorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../week5/p4/src/main/java/com/iquestgroup/remotelearning/week5/p4/models/PigLatinTranslatorImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week5/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../week5/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +99,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.ignored.files" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -83,6 +125,45 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.iquestgroup.remotelearning.week1.p4.Main" />
+      <module name="week1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.iquestgroup.remotelearning.week1.p4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.iquestgroup.remotelearning.week1.p2.Main" />
+      <module name="week1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.iquestgroup.remotelearning.week1.p2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.iquestgroup.remotelearning.week1.p3.Main" />
+      <module name="week1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.iquestgroup.remotelearning.week1.p3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="test.Main" />
       <module name="p4" />
@@ -97,8 +178,10 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.iquestgroup.remotelearning.week1.p1.Main" />
-      <module name="p1" />
+      <module name="week1" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.iquestgroup.remotelearning.week1.p1.models.*" />
@@ -148,13 +231,49 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="p2" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="p2" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -236,7 +355,9 @@
       <workItem from="1614522367777" duration="1178000" />
       <workItem from="1614523938754" duration="39000" />
       <workItem from="1614527421280" duration="10000" />
-      <workItem from="1614534925883" duration="4605000" />
+      <workItem from="1614534925883" duration="5534000" />
+      <workItem from="1615395374068" duration="963000" />
+      <workItem from="1615396433968" duration="28000" />
     </task>
     <servers />
   </component>
@@ -257,5 +378,22 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/w1p4/src/main/java/com/iquestgroup/remotelearning/week1/p4/Main.java</url>
+          <line>6</line>
+          <properties class="com.iquestgroup.remotelearning.week1.p4.Main" method="main">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

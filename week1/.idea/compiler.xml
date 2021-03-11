@@ -7,10 +7,6 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="p1" />
-        <module name="p2" />
-        <module name="p3" />
-        <module name="p4" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
