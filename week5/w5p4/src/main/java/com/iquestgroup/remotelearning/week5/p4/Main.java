@@ -1,5 +1,7 @@
 package com.iquestgroup.remotelearning.week5.p4;
 
+import com.iquestgroup.remotelearning.week5.p4.models.PigLatinTranslator;
+import com.iquestgroup.remotelearning.week5.p4.models.PigLatinTranslatorImpl;
 import java.util.Scanner;
 
 public class Main {

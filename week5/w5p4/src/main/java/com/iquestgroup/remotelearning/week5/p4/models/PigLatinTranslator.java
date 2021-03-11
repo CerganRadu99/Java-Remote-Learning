@@ -1,4 +1,4 @@
-package com.iquestgroup.remotelearning.week5.p4;
+package com.iquestgroup.remotelearning.week5.p4.models;
 
 public interface PigLatinTranslator {
 

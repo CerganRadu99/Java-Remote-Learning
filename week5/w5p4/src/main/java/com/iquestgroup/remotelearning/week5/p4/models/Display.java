@@ -1,4 +1,4 @@
-package com.iquestgroup.remotelearning.week5.p4;
+package com.iquestgroup.remotelearning.week5.p4.models;
 
 import java.awt.Color;
 import java.awt.Dimension;
