@@ -1,6 +1,5 @@
-package com.iquestgroup.remotelearning.week1.p1.models;
+package com.iquestgroup.remotelearning.week1.w1p1.models;
 
-import com.iquestgroup.remotelearning.week1.p1.models.Personality;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

@@ -1,6 +1,6 @@
-package com.iquestgroup.remotelearning.week1.p2;
+package com.iquestgroup.remotelearning.week1.w1p2;
 
-import com.iquestgroup.remotelearning.week1.p2.models.PrimeNumbersDetector;
+import com.iquestgroup.remotelearning.week1.w1p2.models.PrimeNumbersDetector;
 
 
 public class Main {

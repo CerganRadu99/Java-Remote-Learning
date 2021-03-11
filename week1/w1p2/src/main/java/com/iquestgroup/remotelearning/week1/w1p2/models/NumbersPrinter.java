@@ -1,4 +1,4 @@
-package com.iquestgroup.remotelearning.week1.p2.models;
+package com.iquestgroup.remotelearning.week1.w1p2.models;
 
 public interface NumbersPrinter {
 

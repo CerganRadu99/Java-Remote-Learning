@@ -1,8 +1,8 @@
-package com.iquestgroup.remotelearning.week2.p2;
+package com.iquestgroup.remotelearning.week2.w2p2;
 
-import com.iquestgroup.remotelearning.week2.p2.models.Tank;
-import com.iquestgroup.remotelearning.week2.p2.models.TankImpl;
-import com.iquestgroup.remotelearning.week2.p2.models.TankObject;
+import com.iquestgroup.remotelearning.week2.w2p2.models.Tank;
+import com.iquestgroup.remotelearning.week2.w2p2.models.TankImpl;
+import com.iquestgroup.remotelearning.week2.w2p2.models.TankObject;
 
 public class Main {
 

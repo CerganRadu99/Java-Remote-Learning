@@ -1,4 +1,4 @@
-package com.iquestgroup.remotelearning.week3.p1.models;
+package com.iquestgroup.remotelearning.week3.w3p1.models;
 
 import java.util.Calendar;
 

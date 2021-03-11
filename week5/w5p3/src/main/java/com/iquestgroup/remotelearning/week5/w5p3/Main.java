@@ -1,8 +1,8 @@
-package com.iquestgroup.remotelearning.week5.p3;
+package com.iquestgroup.remotelearning.week5.w5p3;
 
 
-import com.iquestgroup.remotelearning.week5.p3.models.SentencesGenerator;
-import com.iquestgroup.remotelearning.week5.p3.models.StoryGenerator;
+import com.iquestgroup.remotelearning.week5.w5p3.models.SentencesGenerator;
+import com.iquestgroup.remotelearning.week5.w5p3.models.StoryGenerator;
 
 public class Main {
 

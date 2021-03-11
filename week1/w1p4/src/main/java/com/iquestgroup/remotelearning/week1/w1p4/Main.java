@@ -1,6 +1,6 @@
-package com.iquestgroup.remotelearning.week1.p4;
+package com.iquestgroup.remotelearning.week1.w1p4;
 
-import com.iquestgroup.remotelearning.week1.p4.models.ConnectionManager;
+import com.iquestgroup.remotelearning.week1.w1p4.models.ConnectionManager;
 
 public class Main {
 

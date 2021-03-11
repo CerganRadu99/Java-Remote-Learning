@@ -1,7 +1,7 @@
-package com.iquestgroup.remotelearning.week5.p2;
+package com.iquestgroup.remotelearning.week5.w5p2;
 
-import com.iquestgroup.remotelearning.week5.p2.models.StringTitlelizer;
-import com.iquestgroup.remotelearning.week5.p2.models.Titlelizer;
+import com.iquestgroup.remotelearning.week5.w5p2.models.StringTitlelizer;
+import com.iquestgroup.remotelearning.week5.w5p2.models.Titlelizer;
 import org.junit.Before;
 import org.junit.Test;
 

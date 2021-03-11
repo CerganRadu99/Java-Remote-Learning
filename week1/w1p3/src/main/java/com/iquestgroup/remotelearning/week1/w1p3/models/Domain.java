@@ -1,4 +1,4 @@
-package com.iquestgroup.remotelearning.week1.p3.models;
+package com.iquestgroup.remotelearning.week1.w1p3.models;
 
 public class Domain {
 

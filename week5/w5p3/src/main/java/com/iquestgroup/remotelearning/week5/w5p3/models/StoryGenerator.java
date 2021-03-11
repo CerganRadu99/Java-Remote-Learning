@@ -1,4 +1,4 @@
-package com.iquestgroup.remotelearning.week5.p3.models;
+package com.iquestgroup.remotelearning.week5.w5p3.models;
 
 
 public class StoryGenerator extends SentencesGenerator {

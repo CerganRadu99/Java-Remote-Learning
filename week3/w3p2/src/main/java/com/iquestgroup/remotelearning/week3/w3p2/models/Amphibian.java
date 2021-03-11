@@ -1,8 +1,8 @@
-package com.iquestgroup.remotelearning.week3.p2.models;
+package com.iquestgroup.remotelearning.week3.w3p2.models;
 
 public class Amphibian {
 
-  protected Skin skin;
+  private Skin skin;
 
   public Amphibian(Skin skin) {
     this.skin = skin;

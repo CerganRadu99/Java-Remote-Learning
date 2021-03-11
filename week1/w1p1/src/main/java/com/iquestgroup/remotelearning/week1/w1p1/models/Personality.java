@@ -1,4 +1,4 @@
-package com.iquestgroup.remotelearning.week1.p1.models;
+package com.iquestgroup.remotelearning.week1.w1p1.models;
 
 public class Personality {
 

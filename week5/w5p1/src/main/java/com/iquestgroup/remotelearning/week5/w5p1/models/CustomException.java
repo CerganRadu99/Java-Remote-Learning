@@ -1,4 +1,4 @@
-package com.iquestgroup.remotelearning.week5.p1.models;
+package com.iquestgroup.remotelearning.week5.w5p1.models;
 
 public class CustomException extends RuntimeException {
 

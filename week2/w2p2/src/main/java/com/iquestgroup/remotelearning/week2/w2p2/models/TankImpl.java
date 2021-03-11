@@ -1,4 +1,4 @@
-package com.iquestgroup.remotelearning.week2.p2.models;
+package com.iquestgroup.remotelearning.week2.w2p2.models;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,6 @@
-package com.iquestgroup.remotelearning.week1.p1;
+package com.iquestgroup.remotelearning.week1.w1p1;
 
-import com.iquestgroup.remotelearning.week1.p1.models.PersonProcessor;
+import com.iquestgroup.remotelearning.week1.w1p1.models.PersonProcessor;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 

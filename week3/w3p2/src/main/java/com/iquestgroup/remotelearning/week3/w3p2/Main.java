@@ -1,8 +1,8 @@
-package com.iquestgroup.remotelearning.week3.p2;
+package com.iquestgroup.remotelearning.week3.w3p2;
 
-import com.iquestgroup.remotelearning.week3.p2.models.Amphibian;
-import com.iquestgroup.remotelearning.week3.p2.models.Frog;
-import com.iquestgroup.remotelearning.week3.p2.models.Skin;
+import com.iquestgroup.remotelearning.week3.w3p2.models.Amphibian;
+import com.iquestgroup.remotelearning.week3.w3p2.models.Frog;
+import com.iquestgroup.remotelearning.week3.w3p2.models.Skin;
 
 public class Main {
 

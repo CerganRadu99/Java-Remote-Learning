@@ -1,9 +1,9 @@
-package com.iquestgroup.remotelearning.week1.p3;
+package com.iquestgroup.remotelearning.week1.w1p3;
 
-import com.iquestgroup.remotelearning.week1.p3.models.Customer;
-import com.iquestgroup.remotelearning.week1.p3.models.Registrar;
-import com.iquestgroup.remotelearning.week1.p3.models.Registry;
-import com.iquestgroup.remotelearning.week1.p3.models.Reseller;
+import com.iquestgroup.remotelearning.week1.w1p3.models.Customer;
+import com.iquestgroup.remotelearning.week1.w1p3.models.Registrar;
+import com.iquestgroup.remotelearning.week1.w1p3.models.Registry;
+import com.iquestgroup.remotelearning.week1.w1p3.models.Reseller;
 
 public class Main {
 

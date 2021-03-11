@@ -1,4 +1,4 @@
-package com.iquestgroup.remotelearning.week1.p4.models;
+package com.iquestgroup.remotelearning.week1.w1p4.models;
 
 public class ConnectionManager {
 

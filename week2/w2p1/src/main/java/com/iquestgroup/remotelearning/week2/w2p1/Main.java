@@ -1,6 +1,6 @@
-package com.iquestgroup.remotelearning.week2.p1;
+package com.iquestgroup.remotelearning.week2.w2p1;
 
-import com.iquestgroup.remotelearning.week2.p1.models.Person;
+import com.iquestgroup.remotelearning.week2.w2p1.models.Person;
 
 public class Main {
 

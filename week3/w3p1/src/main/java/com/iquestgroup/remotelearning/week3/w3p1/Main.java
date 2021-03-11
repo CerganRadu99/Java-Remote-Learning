@@ -1,9 +1,9 @@
-package com.iquestgroup.remotelearning.week3.p1;
+package com.iquestgroup.remotelearning.week3.w3p1;
 
-import com.iquestgroup.remotelearning.week3.p1.models.AmericanPerson;
-import com.iquestgroup.remotelearning.week3.p1.models.FrenchPerson;
-import com.iquestgroup.remotelearning.week3.p1.models.Person;
-import com.iquestgroup.remotelearning.week3.p1.models.RussianPerson;
+import com.iquestgroup.remotelearning.week3.w3p1.models.AmericanPerson;
+import com.iquestgroup.remotelearning.week3.w3p1.models.FrenchPerson;
+import com.iquestgroup.remotelearning.week3.w3p1.models.Person;
+import com.iquestgroup.remotelearning.week3.w3p1.models.RussianPerson;
 import java.util.ArrayList;
 import java.util.List;
 

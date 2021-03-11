@@ -1,4 +1,4 @@
-package com.iquestgroup.remotelearning.week3.p3.models;
+package com.iquestgroup.remotelearning.week3.w3p3.models;
 
 public abstract class CompositeShape implements Shape {
 

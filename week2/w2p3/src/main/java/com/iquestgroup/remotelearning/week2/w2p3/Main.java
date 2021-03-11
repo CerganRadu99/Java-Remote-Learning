@@ -1,7 +1,7 @@
-package com.iquestgroup.remotelearning.week2.p3;
+package com.iquestgroup.remotelearning.week2.w2p3;
 
-import com.iquestgroup.remotelearning.week2.p3.models.Car;
-import com.iquestgroup.remotelearning.week2.p3.models.Vehicle;
+import com.iquestgroup.remotelearning.week2.w2p3.models.Car;
+import com.iquestgroup.remotelearning.week2.w2p3.models.Vehicle;
 
 public class Main {
 
