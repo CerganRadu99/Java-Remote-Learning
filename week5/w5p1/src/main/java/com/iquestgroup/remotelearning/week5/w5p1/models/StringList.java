@@ -9,7 +9,7 @@ public class StringList implements List<String> {
   private static final int LIST_CAPACITY = 4;
   private static final int STRINGS_ARE_EQUAL = 0;
   private final java.util.List<String> operations = new ArrayList<>();
-  private final String[] numbersAsStrings = new String[LIST_CAPACITY];
+  private Integer[] numbers = new Integer[LIST_CAPACITY];
   private int indexNumber;
 
   public StringList() {
@@ -28,7 +28,10 @@ public class StringList implements List<String> {
     } else if (!NumberUtils.isCreatable(element)) {
       throw new CustomException("Invalid number.");
     } else {
-      numbersAsStrings[indexNumber++] = element;
+      if(numbers.length == LIST_CAPACITY){
+        resizeArray();
+      }
+      numbers[indexNumber++] = Integer.parseInt(element);
     }
   }
 
@@ -38,15 +41,15 @@ public class StringList implements List<String> {
     if (isIndexOutOfBounds(position)) {
       throw new CustomException("Index out of bounds.");
     } else {
-      return numbersAsStrings[position];
+      return Integer.toString(numbers[position]);
     }
   }
 
   @Override
   public boolean contains(String element) {
     operations.add("contains()");
-    for (String currentString : numbersAsStrings) {
-      if (currentString.compareTo(element) == STRINGS_ARE_EQUAL) {
+    for (Integer currentNumber : numbers) {
+      if (Integer.toString(currentNumber).compareTo(element) == STRINGS_ARE_EQUAL) {
         return true;
       }
     }
@@ -56,7 +59,7 @@ public class StringList implements List<String> {
   @Override
   public boolean containsAll(List<String> foreignList) {
     operations.add("containsAll()");
-    java.util.List arrayAsList = Arrays.asList(numbersAsStrings);
+    java.util.List arrayAsList = Arrays.asList(numbers);
     for (int index = 0; index < foreignList.size(); index++) {
       if (!arrayAsList.contains(foreignList.get(index))) {
         return false;
@@ -68,17 +71,22 @@ public class StringList implements List<String> {
   @Override
   public int size() {
     operations.add("size()");
-    return numbersAsStrings.length;
+    return indexNumber;
   }
 
   private boolean isNullOrEmpty(String currentString) {
-    if (currentString != null && !currentString.isEmpty()) {
-      return false;
-    }
-    return true;
+    return currentString == null || currentString.isEmpty();
   }
 
   private boolean isIndexOutOfBounds(int index) {
-    return index >= numbersAsStrings.length;
+    return index >= indexNumber;
+  }
+
+  private void resizeArray(){
+    Integer[] oldNumbers = Arrays.copyOf(numbers, LIST_CAPACITY);
+    numbers = new Integer[LIST_CAPACITY * 2];
+    for(int index = 0; index < oldNumbers.length; index++){
+      numbers[index] = oldNumbers[index];
+    }
   }
 }
