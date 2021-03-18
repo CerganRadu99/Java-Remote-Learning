@@ -5,24 +5,28 @@ import java.util.Random;
 
 public class SentencesGenerator {
 
-  protected Display display;
-  protected StringBuilder stringBuilder;
-  protected static final int LENGTH_WHEN_STRING_BUILDER_EMPTY = 0;
+  private final Display display;
+  private StringBuilder stringBuilder;
+  private static final int LENGTH_WHEN_STRING_BUILDER_EMPTY = 0;
   private static final int NUMBER_OF_SENTENCES = 20;
   private final Random random;
   private static final int START_INDEX_FIRST_LETTER = 0;
   private static final int END_INDEX_FIRST_LETTER = 1;
   private static final String STRING_DELIMITER = " ";
   private static final String END_PERIOD = ".";
-  private static final String[] articles = {"the", "a", "one", "some", "any"};
-  private static final String[] nouns = {"boy", "girl", "dog", "town", "car"};
-  private static final String[] verbs = {"drove", "jumped", "ran", "walked", "skipped"};
-  private static final String[] prepositions = {"to", "from", "over", "under", "on"};
+  private static final String[] ARTICLES = {"the", "a", "one", "some", "any"};
+  private static final String[] NOUNS = {"boy", "girl", "dog", "town", "car"};
+  private static final String[] VERBS = {"drove", "jumped", "ran", "walked", "skipped"};
+  private static final String[] PREPOSITIONS = {"to", "from", "over", "under", "on"};
 
   public SentencesGenerator() {
     random = new Random();
     stringBuilder = new StringBuilder();
     display = new Display();
+  }
+
+  public Display getDisplay() {
+    return display;
   }
 
   public void outputSentences() {
@@ -40,7 +44,7 @@ public class SentencesGenerator {
     }
   }
 
-  protected StringBuilder createSentence() {
+  public StringBuilder createSentence() {
     stringBuilder.append(pickRandomArticle());
     stringBuilder.append(STRING_DELIMITER);
     stringBuilder.append(pickRandomNoun());
@@ -55,7 +59,7 @@ public class SentencesGenerator {
     return stringBuilder;
   }
 
-  protected String makeSentencePrintable(StringBuilder stringBuilder) {
+  public String makeSentencePrintable(StringBuilder stringBuilder) {
     stringBuilder.append(END_PERIOD);
     String printableSentence = stringBuilder.toString();
     return
@@ -64,19 +68,18 @@ public class SentencesGenerator {
   }
 
   private String pickRandomArticle() {
-    return articles[random.nextInt(articles.length)];
+    return ARTICLES[random.nextInt(ARTICLES.length)];
   }
 
   private String pickRandomNoun() {
-    return nouns[random.nextInt(nouns.length)];
+    return NOUNS[random.nextInt(NOUNS.length)];
   }
 
   private String pickRandomVerb() {
-    return verbs[random.nextInt(verbs.length)];
+    return VERBS[random.nextInt(VERBS.length)];
   }
 
   private String pickRandomPreposition() {
-    return prepositions[random.nextInt(prepositions.length)];
+    return PREPOSITIONS[random.nextInt(PREPOSITIONS.length)];
   }
-
 }

@@ -11,8 +11,8 @@ public class Main {
     sentencesGenerator.generateSentences();
     sentencesGenerator.outputSentences();
 
-    SentencesGenerator storyGenerator = new StoryGenerator(50);
-    storyGenerator.generateSentences();
-    storyGenerator.outputSentences();
+    StoryGenerator storyGenerator = new StoryGenerator(100, new SentencesGenerator());
+    storyGenerator.generateStory();
+    storyGenerator.outputStory();
   }
 }
