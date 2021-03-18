@@ -8,12 +8,13 @@ public class PigLatinTranslatorImpl implements PigLatinTranslator {
   private static final int START_INDEX_FIRST_LETTER = 0;
   private static final int END_INDEX_FIRST_LETTER = 1;
   private static final int END_INDEX_SECOND_LETTER = 2;
+  private static final int SIZE_ONE_LETTER_WORD = 1;
   private static final String STRING_DELIMITER = " ";
   private static final String NEW_LINE = "\n";
   private static final String PREFIX_PIG_LATIN = "ay";
   private StringTokenizer stringTokenizer;
   private final Display display;
-  private static int phrasesTranslated;
+  private int phrasesTranslated;
 
   public PigLatinTranslatorImpl() {
     display = new Display();
@@ -26,7 +27,8 @@ public class PigLatinTranslatorImpl implements PigLatinTranslator {
     while (stringTokenizer.hasMoreTokens()) {
       String latinWord;
       String englishWord = stringTokenizer.nextToken();
-      if (Character.isUpperCase(englishWord.charAt(START_INDEX_FIRST_LETTER))) {
+      if (Character.isUpperCase(englishWord.charAt(START_INDEX_FIRST_LETTER))
+          && englishWord.length() != SIZE_ONE_LETTER_WORD) {
         String englishWordUpdated = updateWord(englishWord);
         latinWord = translateWord(englishWordUpdated);
       } else {
@@ -43,8 +45,12 @@ public class PigLatinTranslatorImpl implements PigLatinTranslator {
 
   @Override
   public String translateWord(String englishWord) {
-    return englishWord.substring(END_INDEX_FIRST_LETTER) + englishWord
-        .substring(START_INDEX_FIRST_LETTER, END_INDEX_FIRST_LETTER) + PREFIX_PIG_LATIN;
+    if (englishWord.length() == SIZE_ONE_LETTER_WORD) {
+      return englishWord + PREFIX_PIG_LATIN;
+    } else {
+      return englishWord.substring(END_INDEX_FIRST_LETTER) + englishWord
+          .substring(START_INDEX_FIRST_LETTER, END_INDEX_FIRST_LETTER) + PREFIX_PIG_LATIN;
+    }
   }
 
   private void tokenizePhrase(String englishPhrase) {
