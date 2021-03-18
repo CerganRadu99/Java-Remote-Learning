@@ -13,7 +13,7 @@ public class StringTitlelizer implements Titlelizer {
   private static final int EQUAL_STRINGS = 0;
   private static final int END_INDEX_FIRST_WORD = 1;
   private static final String[] WORDS_TO_IGNORE = {"the", "a", "to", "in", "of", "this", "is"};
-  private static final List<String> listWordsToIgnore = new ArrayList<>(
+  private static final List<String> LIST_WORDS_TO_IGNORE = new ArrayList<>(
       Arrays.asList(WORDS_TO_IGNORE));
 
   @Override
@@ -44,7 +44,7 @@ public class StringTitlelizer implements Titlelizer {
   }
 
   private boolean isWordToIgnore(String toCheck) {
-    return listWordsToIgnore.contains(toCheck);
+    return LIST_WORDS_TO_IGNORE.contains(toCheck);
   }
 
   private boolean isFirstWord(String toCheck, String whereToCheck) {
