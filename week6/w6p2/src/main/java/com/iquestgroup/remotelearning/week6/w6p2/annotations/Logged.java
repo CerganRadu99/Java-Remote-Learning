@@ -1,4 +1,4 @@
-package com.iquestgroup.remotelearning.week6.w6p2;
+package com.iquestgroup.remotelearning.week6.w6p2.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

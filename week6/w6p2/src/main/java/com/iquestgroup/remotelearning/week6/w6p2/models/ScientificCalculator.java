@@ -1,5 +1,8 @@
-package com.iquestgroup.remotelearning.week6.w6p2;
+package com.iquestgroup.remotelearning.week6.w6p2.models;
 
+import com.iquestgroup.remotelearning.week6.w6p2.annotations.Logged;
+
+@Logged
 public class ScientificCalculator implements Calculator {
 
   private static final double DELTA = 0.001;
