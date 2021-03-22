@@ -3,7 +3,7 @@ package com.iquestgroup.remotelearning.week5.w5p1;
 import static junit.framework.Assert.assertTrue;
 import static org.junit.Assert.assertEquals;
 
-import com.iquestgroup.remotelearning.week5.w5p1.models.CustomException;
+import com.iquestgroup.remotelearning.week5.w5p1.exceptions.CustomException;
 import com.iquestgroup.remotelearning.week5.w5p1.models.List;
 import com.iquestgroup.remotelearning.week5.w5p1.models.StringList;
 import org.junit.Before;

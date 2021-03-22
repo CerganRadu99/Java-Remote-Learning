@@ -1,5 +1,7 @@
 package com.iquestgroup.remotelearning.week5.w5p1.models;
 
+import com.iquestgroup.remotelearning.week5.w5p1.exceptions.CustomException;
+import com.iquestgroup.remotelearning.week5.w5p1.models.List;
 import java.util.ArrayList;
 import java.util.Arrays;
 import org.apache.commons.lang3.math.NumberUtils;
@@ -28,7 +30,7 @@ public class StringList implements List<String> {
     } else if (!NumberUtils.isCreatable(element)) {
       throw new CustomException("Invalid number.");
     } else {
-      if(numbers.length == LIST_CAPACITY){
+      if (numbers.length == LIST_CAPACITY) {
         resizeArray();
       }
       numbers[indexNumber++] = Integer.parseInt(element);
@@ -82,10 +84,10 @@ public class StringList implements List<String> {
     return index >= indexNumber;
   }
 
-  private void resizeArray(){
+  private void resizeArray() {
     Integer[] oldNumbers = Arrays.copyOf(numbers, LIST_CAPACITY);
     numbers = new Integer[LIST_CAPACITY * 2];
-    for(int index = 0; index < oldNumbers.length; index++){
+    for (int index = 0; index < oldNumbers.length; index++) {
       numbers[index] = oldNumbers[index];
     }
   }
