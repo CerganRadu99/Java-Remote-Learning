@@ -7,18 +7,18 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 
-public class MyClassLoader extends ClassLoader {
+public class SubclassLoader extends ClassLoader {
 
-  private static final String EXTERNAL_CLASS_CANONICAL_NAME = "com.iquestgroup.remotelearning.week6.w6p3.models.MyClass";
-  private static final String EXTERNAL_CLASS_PATH = "file:C:\\Users\\cerga\\IntellijUltimateWorkspace\\externalClasses\\test\\src\\com\\iquestgroup\\remotelearning\\week6\\w6p3\\models\\MyClass.class";
+  private static final String EXTERNAL_SUBCLASS_CANONICAL_NAME = "com.iquestgroup.remotelearning.week6.w6p3.models.MySubclass";
+  private static final String EXTERNAL_SUBCLASS_PATH = "file:C:\\Users\\cerga\\IntellijUltimateWorkspace\\externalClasses\\test\\src\\com\\iquestgroup\\remotelearning\\week6\\w6p3\\models\\MySubclass.class";
 
-  public MyClassLoader(ClassLoader parent) {
+  public SubclassLoader(ClassLoader parent) {
     super(parent);
   }
 
   public Class loadClass(String name) throws ClassNotFoundException {
 
-    if (!EXTERNAL_CLASS_CANONICAL_NAME.equals(name)) {
+    if (!EXTERNAL_SUBCLASS_CANONICAL_NAME.equals(name)) {
       return super.loadClass(name);
     }
 
@@ -28,7 +28,7 @@ public class MyClassLoader extends ClassLoader {
     }
 
     try {
-      String url = EXTERNAL_CLASS_PATH;
+      String url = EXTERNAL_SUBCLASS_PATH;
       URL myUrl = new URL(url);
       URLConnection connection = myUrl.openConnection();
       InputStream input = connection.getInputStream();
@@ -44,7 +44,7 @@ public class MyClassLoader extends ClassLoader {
 
       byte[] classData = buffer.toByteArray();
 
-      return defineClass(EXTERNAL_CLASS_CANONICAL_NAME,
+      return defineClass(EXTERNAL_SUBCLASS_CANONICAL_NAME,
           classData, 0, classData.length);
 
     } catch (MalformedURLException e) {
