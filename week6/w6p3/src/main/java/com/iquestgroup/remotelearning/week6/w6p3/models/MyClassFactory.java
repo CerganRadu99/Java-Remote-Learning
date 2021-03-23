@@ -25,7 +25,5 @@ public class MyClassFactory {
       object = (MyClass) myObjectClass.newInstance();
     }
     return object;
-
   }
-
 }
