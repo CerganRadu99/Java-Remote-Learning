@@ -22,6 +22,10 @@ public class EngineFactory {
     this.engineComponents = engineComponents;
   }
 
+  public static int getComponentsPerEngine() {
+    return COMPONENTS_PER_ENGINE;
+  }
+
   public List<Engine> manufactureEngines(int numberOfEngines, Employee assignedEmployee) {
     checkAssignedEmployee(assignedEmployee);
     if (enoughComponentsInStock(numberOfEngines)) {
@@ -31,29 +35,21 @@ public class EngineFactory {
       }
       return newEngines;
     } else {
-      throw new InsufficientStockException(
-          "Not enough stock to build [" + numberOfEngines + "] engines!");
+      throw new InsufficientStockException("Not enough stock to build [" + numberOfEngines + "] engines!");
     }
   }
 
-  public static int getComponentsPerEngine() {
-    return COMPONENTS_PER_ENGINE;
-  }
-
   /**
-   * Makes sure that the employee assigned to manufacture the engines meets all the necessary
-   * conditions for this task.
+   * Makes sure that the employee assigned to manufacture the engines meets all the necessary conditions for this task.
    *
    * @param assignedEmployee the employee to check
    */
   private void checkAssignedEmployee(Employee assignedEmployee) {
     if (!employees.contains(assignedEmployee)) {
-      throw new UnauthorizedEmployeeException("Employee [" + assignedEmployee.getName()
-          + "]is not authorized to work at this factory!");
+      throw new UnauthorizedEmployeeException("Employee [" + assignedEmployee.getName() + "]is not authorized to work at this factory!");
     }
     if (!assignedEmployee.isAssemblyLineWorker()) {
-      throw new UnqualifiedEmployeeException(
-          "Employee [" + assignedEmployee.getName() + "] is not qualified to build engines!");
+      throw new UnqualifiedEmployeeException("Employee [" + assignedEmployee.getName() + "] is not qualified to build engines!");
     }
   }
 
@@ -71,8 +67,7 @@ public class EngineFactory {
   }
 
   /**
-   * Determines if there are enough engine components in stock to build the required number of
-   * engines.
+   * Determines if there are enough engine components in stock to build the required number of engines.
    *
    * @param numberOfEnginesToBuild the number of engines we have to build
    * @return true if we have enough components in stock, false otherwise
