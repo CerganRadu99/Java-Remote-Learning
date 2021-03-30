@@ -1,20 +1,12 @@
 package com.iquestgroup.remotelearning.week4.w4p1.models;
 
 
-public class TaxiDriver implements Person, Driver {
+public class TaxiDriver implements Driver {
 
   private final String name;
 
   public TaxiDriver(String name) {
     this.name = name;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void sleep() {
-    System.out.println("Driver " + name + " sleeps");
   }
 
   @Override

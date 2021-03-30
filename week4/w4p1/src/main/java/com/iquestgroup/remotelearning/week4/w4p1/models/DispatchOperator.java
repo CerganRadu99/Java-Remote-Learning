@@ -2,7 +2,7 @@ package com.iquestgroup.remotelearning.week4.w4p1.models;
 
 import java.util.List;
 
-public class DispatchOperator implements Person, Dispatcher {
+public class DispatchOperator implements Dispatcher {
 
   private final String name;
   private final List<Driver> drivers;
@@ -15,7 +15,7 @@ public class DispatchOperator implements Person, Dispatcher {
 
   @Override
   public void dispatch(String location) {
-    getBestAvailableTaxi(location).goToAddress(location);
+    getBestAvailableTaxi().goToAddress(location);
   }
 
   @Override
@@ -23,7 +23,7 @@ public class DispatchOperator implements Person, Dispatcher {
     System.out.println("Operator " + name + " eats");
   }
 
-  private Driver getBestAvailableTaxi(String location) {
+  private Driver getBestAvailableTaxi() {
     return drivers.get(BEST_AVAILABLE_TAXI);
   }
 }
