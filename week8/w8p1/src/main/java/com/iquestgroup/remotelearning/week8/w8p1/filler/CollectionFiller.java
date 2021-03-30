@@ -10,8 +10,8 @@ import java.util.Map;
 
 public class CollectionFiller {
 
-  public static final CollectionType SET_COLLECTION = CollectionType.SET;
-  public static final CollectionType LIST_COLLECTION = CollectionType.LIST;
+  private static final CollectionType SET_COLLECTION = CollectionType.SET;
+  private static final CollectionType LIST_COLLECTION = CollectionType.LIST;
 
   public static <T> Collection<T> fillCollection(CollectionType collectionType, Generator<T> generator, int length) {
     if (collectionType == SET_COLLECTION) {

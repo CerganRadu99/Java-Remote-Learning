@@ -8,10 +8,10 @@ import java.util.Random;
 
 public class CountryGenerator implements Generator<Country> {
 
-  public static final int RANDOM_SEED = 49;
-  public static final Random RANDOM = new Random(RANDOM_SEED);
-  public static final Map<String, String> COUNTRIES = new HashMap<>();
-  public static final String[] NAMES_OF_COUNTRIES;
+  private static final int RANDOM_SEED = 49;
+  private static final Random RANDOM = new Random(RANDOM_SEED);
+  private static final Map<String, String> COUNTRIES = new HashMap<>();
+  private static final String[] NAMES_OF_COUNTRIES;
 
   static {
     COUNTRIES.put("Colombia", "Bogota");
@@ -24,6 +24,10 @@ public class CountryGenerator implements Generator<Country> {
     COUNTRIES.put("Sweden", "Stockholm");
     COUNTRIES.put("Romania", "Bucharest");
     NAMES_OF_COUNTRIES = new String[]{"Colombia", "Croatia", "Portugal", "Poland", "Finland", "Spain", "Sweden", "Romania", "France"};
+  }
+
+  public static int getRandomSeed() {
+    return RANDOM_SEED;
   }
 
   @Override

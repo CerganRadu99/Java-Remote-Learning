@@ -64,7 +64,7 @@ public class AlgorithmsTest {
 
   @Test
   public void testRandomSeed() {
-    int actualResult = CountryGenerator.RANDOM_SEED;
+    int actualResult = CountryGenerator.getRandomSeed();
     String assertMessage = "Random seed is not " + VALID_RANDOM_SEED;
     assertEquals(assertMessage, VALID_RANDOM_SEED, actualResult);
   }
