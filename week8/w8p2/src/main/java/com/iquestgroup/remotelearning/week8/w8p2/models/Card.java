@@ -2,8 +2,8 @@ package com.iquestgroup.remotelearning.week8.w8p2.models;
 
 public class Card {
 
-  private Number number;
-  private Suite suite;
+  private final Number number;
+  private final Suite suite;
 
   public Card(Number number, Suite suite) {
     this.number = number;

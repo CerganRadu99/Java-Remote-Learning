@@ -7,8 +7,8 @@ import com.iquestgroup.remotelearning.week8.w8p2.models.Suite;
 
 public class CardGenerator implements Generator<Card> {
 
-  public static final Number[] NUMBERS;
-  public static final Suite[] SUITES;
+  private static final Number[] NUMBERS;
+  private static final Suite[] SUITES;
 
   static {
     NUMBERS = Number.values();

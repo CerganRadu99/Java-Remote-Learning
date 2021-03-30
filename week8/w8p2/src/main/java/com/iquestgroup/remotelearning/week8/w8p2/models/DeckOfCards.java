@@ -5,8 +5,8 @@ import com.iquestgroup.remotelearning.week8.w8p2.generator.CardGenerator;
 
 public class DeckOfCards {
 
-  public static final int NUMBER_OF_CARDS = 52;
-  private Card[] cards;
+  private static final int NUMBER_OF_CARDS = 52;
+  private final Card[] cards;
 
   public DeckOfCards() {
     cards = new Card[NUMBER_OF_CARDS];
@@ -16,11 +16,7 @@ public class DeckOfCards {
     return cards;
   }
 
-  public void setCards(Card[] cards) {
-    this.cards = cards;
-  }
-
   public void fill() {
-    cards = DeckOfCardsFiller.fill(cards, new CardGenerator());
+    DeckOfCardsFiller.fill(cards, new CardGenerator());
   }
 }
