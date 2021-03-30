@@ -26,6 +26,7 @@
     <module>week6</module>
     <module>week4</module>
     <module>week7</module>
+    <module>week8</module>
 
   </modules>
   <dependencies>
