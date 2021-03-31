@@ -18,8 +18,7 @@ public class EngineFactory {
 
   public List<Engine> manufactureEngines(int numberOfEngines, Employee assignedEmployee) {
     if (!employeeService.isAssemblyLineWorker(assignedEmployee)) {
-      throw new UnqualifiedEmployeeException(
-          "Employee [" + assignedEmployee.getName() + "] is not qualified to build engines!");
+      throw new UnqualifiedEmployeeException("Employee [" + assignedEmployee.getName() + "] is not qualified to build engines!");
     }
 
     List<Engine> newEngines = new ArrayList<Engine>();
