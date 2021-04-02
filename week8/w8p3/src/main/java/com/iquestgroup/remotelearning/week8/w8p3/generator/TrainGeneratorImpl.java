@@ -1,10 +1,10 @@
 package com.iquestgroup.remotelearning.week8.w8p3.generator;
 
-import com.iquestgroup.remotelearning.week8.w8p1.models.Generator;
 import com.iquestgroup.remotelearning.week8.w8p3.models.Train;
+import com.iquestgroup.remotelearning.week8.w8p3.models.TrainGenerator;
 import java.util.Random;
 
-public class TrainGenerator implements Generator<Train> {
+public class TrainGeneratorImpl implements TrainGenerator {
 
   private static final int RANDOM_SEED = 1;
   private static final Random random = new Random(RANDOM_SEED);
@@ -16,10 +16,6 @@ public class TrainGenerator implements Generator<Train> {
     TRAIN_NUMBERS = new int[]{1111, 1113, 1115, 1117, 1119, 1201, 1203, 1205};
     TRAIN_TYPES = new String[]{"Inter-City", "Regional", "Rapid Transit", "Commuter", "Short-Distance"};
     NUMBER_OF_WAGONS = new int[]{3, 2, 4, 5};
-  }
-
-  public static int getRandomSeed() {
-    return RANDOM_SEED;
   }
 
   @Override

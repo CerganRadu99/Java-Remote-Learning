@@ -1,12 +1,12 @@
 package com.iquestgroup.remotelearning.week8.w8p1.generator;
 
-import com.iquestgroup.remotelearning.week8.w8p1.models.Generator;
 import com.iquestgroup.remotelearning.week8.w8p1.models.Country;
+import com.iquestgroup.remotelearning.week8.w8p1.models.CountryGenerator;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-public class CountryGenerator implements Generator<Country> {
+public class CountryGeneratorImpl implements CountryGenerator {
 
   private static final int RANDOM_SEED = 49;
   private static final Random RANDOM = new Random(RANDOM_SEED);
@@ -24,10 +24,6 @@ public class CountryGenerator implements Generator<Country> {
     COUNTRIES.put("Sweden", "Stockholm");
     COUNTRIES.put("Romania", "Bucharest");
     NAMES_OF_COUNTRIES = new String[]{"Colombia", "Croatia", "Portugal", "Poland", "Finland", "Spain", "Sweden", "Romania", "France"};
-  }
-
-  public static int getRandomSeed() {
-    return RANDOM_SEED;
   }
 
   @Override

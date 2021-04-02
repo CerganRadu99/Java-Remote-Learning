@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class DeckOfCardsShuffler {
 
-  private static final Random random = new Random();
+  private static final Random RANDOM = new Random();
   private final DeckOfCards deckOfCards;
 
   public DeckOfCardsShuffler(DeckOfCards deckOfCards) {
@@ -19,7 +19,7 @@ public class DeckOfCardsShuffler {
 
   public void shuffle() {
     for (int indexFirstElementSwitched = deckOfCards.getCards().length - 1; indexFirstElementSwitched > 0; indexFirstElementSwitched--) {
-      int indexSecondElementSwitched = random.nextInt(indexFirstElementSwitched + 1);
+      int indexSecondElementSwitched = RANDOM.nextInt(indexFirstElementSwitched + 1);
       Card temporaryCard = deckOfCards.getCards()[indexFirstElementSwitched];
       deckOfCards.getCards()[indexFirstElementSwitched] = deckOfCards.getCards()[indexSecondElementSwitched];
       deckOfCards.getCards()[indexSecondElementSwitched] = temporaryCard;

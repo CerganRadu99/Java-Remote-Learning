@@ -24,6 +24,18 @@ public class Train {
   }
 
   @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    Train train = (Train) o;
+    return trainNumber == train.trainNumber && noWagons == train.noWagons && Objects.equals(trainType, train.trainType);
+  }
+
+  @Override
   public int hashCode() {
     //return 3;
     return Objects.hash(trainNumber, trainType, noWagons);

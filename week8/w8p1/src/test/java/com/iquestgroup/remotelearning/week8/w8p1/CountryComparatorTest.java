@@ -2,19 +2,18 @@ package com.iquestgroup.remotelearning.week8.w8p1;
 
 import static org.junit.Assert.assertEquals;
 
-import com.iquestgroup.remotelearning.week8.w8p1.filler.CollectionFiller;
-import com.iquestgroup.remotelearning.week8.w8p1.generator.CountryGenerator;
+import com.iquestgroup.remotelearning.week8.w8p1.filler.CountryListFiller;
 import com.iquestgroup.remotelearning.week8.w8p1.comparator.CountryComparator;
-import com.iquestgroup.remotelearning.week8.w8p1.models.CollectionType;
+import com.iquestgroup.remotelearning.week8.w8p1.generator.CountryGeneratorImpl;
 import com.iquestgroup.remotelearning.week8.w8p1.models.Country;
-import com.iquestgroup.remotelearning.week8.w8p1.models.Generator;
+import com.iquestgroup.remotelearning.week8.w8p1.models.CountryGenerator;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class AlgorithmsTest {
+public class CountryComparatorTest {
 
   public static final ArrayList<Country> ARRAYLIST_SORTED_BY_NAME;
   public static final ArrayList<Country> ARRAYLIST_SORTED_BY_CAPITAL;
@@ -22,7 +21,6 @@ public class AlgorithmsTest {
   public static final int INDEX_SEARCHED_ELEMENT_WHEN_SORTED_BY_NAME;
   public static final int INDEX_SEARCHED_ELEMENT_WHEN_SORTED_BY_CAPITAL;
   public static final Country VALID_SEARCHED_ELEMENT;
-  public static final CollectionType LIST_TYPE;
 
   private static ArrayList<Country> countriesArrayList;
 
@@ -53,20 +51,13 @@ public class AlgorithmsTest {
     INDEX_SEARCHED_ELEMENT_WHEN_SORTED_BY_CAPITAL = 4;
     VALID_SEARCHED_ELEMENT = new Country("France", "Paris");
     VALID_RANDOM_SEED = 49;
-    LIST_TYPE = CollectionType.LIST;
   }
 
   @BeforeClass
   public static void beforeTests() {
-    Generator<Country> countryGenerator = new CountryGenerator();
-    countriesArrayList = (ArrayList<Country>) CollectionFiller.fillCollection(LIST_TYPE, countryGenerator, 10);
-  }
-
-  @Test
-  public void testRandomSeed() {
-    int actualResult = CountryGenerator.getRandomSeed();
-    String assertMessage = "Random seed is not " + VALID_RANDOM_SEED;
-    assertEquals(assertMessage, VALID_RANDOM_SEED, actualResult);
+    CountryGenerator countryGenerator = new CountryGeneratorImpl();
+    CountryListFiller countryListFiller = new CountryListFiller();
+    countriesArrayList = (ArrayList<Country>)countryListFiller.fillCountryList(countryGenerator, 10);
   }
 
   @Test

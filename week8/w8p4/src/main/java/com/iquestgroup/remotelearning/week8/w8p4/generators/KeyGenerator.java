@@ -1,10 +1,10 @@
 package com.iquestgroup.remotelearning.week8.w8p4.generators;
 
-import com.iquestgroup.remotelearning.week8.w8p1.models.Generator;
 import com.iquestgroup.remotelearning.week8.w8p4.models.Train;
+import com.iquestgroup.remotelearning.week8.w8p4.models.TrainGenerator;
 import java.util.Random;
 
-public class KeyGenerator implements Generator<Train> {
+public class KeyGenerator implements TrainGenerator {
 
   private static final int RANDOM_SEED = 1;
   private static final Random random = new Random(RANDOM_SEED);

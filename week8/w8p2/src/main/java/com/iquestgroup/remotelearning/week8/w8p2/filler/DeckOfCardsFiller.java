@@ -1,13 +1,15 @@
 package com.iquestgroup.remotelearning.week8.w8p2.filler;
 
-import com.iquestgroup.remotelearning.week8.w8p1.models.Generator;
+import com.iquestgroup.remotelearning.week8.w8p2.models.Card;
+import com.iquestgroup.remotelearning.week8.w8p2.models.CardGenerator;
 
 public class DeckOfCardsFiller {
 
-  public static <T> T[] fill(T[] array, Generator<T> generator) {
-    for (int index = 0; index < array.length; index++) {
-      array[index] = generator.next();
+  public Card[] fillDeckOfCards(CardGenerator cardGenerator, int length) {
+    Card[] cards = new Card[length];
+    for (int index = 0; index < length; index++) {
+      cards[index] = cardGenerator.next();
     }
-    return array;
+    return cards;
   }
 }

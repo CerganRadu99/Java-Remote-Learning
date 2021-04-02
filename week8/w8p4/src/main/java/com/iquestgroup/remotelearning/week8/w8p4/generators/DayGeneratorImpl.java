@@ -1,10 +1,10 @@
 package com.iquestgroup.remotelearning.week8.w8p4.generators;
 
-import com.iquestgroup.remotelearning.week8.w8p1.models.Generator;
 import com.iquestgroup.remotelearning.week8.w8p4.models.Day;
+import com.iquestgroup.remotelearning.week8.w8p4.models.DayGenerator;
 import java.util.Random;
 
-public class DayGenerator implements Generator<Day> {
+public class DayGeneratorImpl implements DayGenerator {
 
   private static final int RANDOM_SEED = 39;
   private static final Random random = new Random(RANDOM_SEED);

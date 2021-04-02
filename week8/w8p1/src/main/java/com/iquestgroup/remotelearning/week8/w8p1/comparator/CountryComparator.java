@@ -6,7 +6,7 @@ import java.util.Comparator;
 public class CountryComparator implements Comparator<Country> {
 
   @Override
-  public int compare(Country o1, Country o2) {
-    return o1.getCapital().compareTo(o2.getCapital());
+  public int compare(Country country1, Country country2) {
+    return country1.getCapital().compareTo(country2.getCapital());
   }
 }
