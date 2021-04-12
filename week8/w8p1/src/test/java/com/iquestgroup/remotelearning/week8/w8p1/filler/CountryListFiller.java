@@ -1,7 +1,7 @@
 package com.iquestgroup.remotelearning.week8.w8p1.filler;
 
+import com.iquestgroup.remotelearning.week8.w8p1.generator.CountryGenerator;
 import com.iquestgroup.remotelearning.week8.w8p1.models.Country;
-import com.iquestgroup.remotelearning.week8.w8p1.models.CountryGenerator;
 import java.util.ArrayList;
 import java.util.List;
 

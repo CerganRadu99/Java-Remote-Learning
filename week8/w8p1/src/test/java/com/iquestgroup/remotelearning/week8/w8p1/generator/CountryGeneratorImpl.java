@@ -7,8 +7,6 @@ import java.util.Random;
 
 public class CountryGeneratorImpl implements CountryGenerator {
 
-  private static final int RANDOM_SEED = 49;
-  private static final Random RANDOM = new Random(RANDOM_SEED);
   private static final Map<String, String> COUNTRIES = new HashMap<>();
   private static final String[] NAMES_OF_COUNTRIES;
 
@@ -25,9 +23,15 @@ public class CountryGeneratorImpl implements CountryGenerator {
     NAMES_OF_COUNTRIES = new String[]{"Colombia", "Croatia", "Portugal", "Poland", "Finland", "Spain", "Sweden", "Romania", "France"};
   }
 
+  private final Random random;
+
+  public CountryGeneratorImpl(int randomSeed) {
+    random = new Random(randomSeed);
+  }
+
   @Override
   public Country next() {
-    String countryName = NAMES_OF_COUNTRIES[RANDOM.nextInt(COUNTRIES.size())];
+    String countryName = NAMES_OF_COUNTRIES[random.nextInt(COUNTRIES.size())];
     String countryCapital = COUNTRIES.get(countryName);
     return new Country(countryName, countryCapital);
   }

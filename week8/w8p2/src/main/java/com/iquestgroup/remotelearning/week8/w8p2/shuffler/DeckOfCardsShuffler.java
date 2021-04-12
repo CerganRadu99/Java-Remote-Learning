@@ -6,11 +6,12 @@ import java.util.Random;
 
 public class DeckOfCardsShuffler {
 
-  private static final Random RANDOM = new Random();
+  private final Random random;
   private final DeckOfCards deckOfCards;
 
-  public DeckOfCardsShuffler(DeckOfCards deckOfCards) {
+  public DeckOfCardsShuffler(DeckOfCards deckOfCards, int randomSeed) {
     this.deckOfCards = deckOfCards;
+    random = new Random(randomSeed);
   }
 
   public DeckOfCards getDeckOfCards() {
@@ -19,7 +20,7 @@ public class DeckOfCardsShuffler {
 
   public void shuffle() {
     for (int indexFirstElementSwitched = deckOfCards.getCards().length - 1; indexFirstElementSwitched > 0; indexFirstElementSwitched--) {
-      int indexSecondElementSwitched = RANDOM.nextInt(indexFirstElementSwitched + 1);
+      int indexSecondElementSwitched = random.nextInt(indexFirstElementSwitched + 1);
       Card temporaryCard = deckOfCards.getCards()[indexFirstElementSwitched];
       deckOfCards.getCards()[indexFirstElementSwitched] = deckOfCards.getCards()[indexSecondElementSwitched];
       deckOfCards.getCards()[indexSecondElementSwitched] = temporaryCard;

@@ -6,7 +6,7 @@ import static org.junit.Assert.assertTrue;
 import com.iquestgroup.remotelearning.week8.w8p3.filler.TrainSetFiller;
 import com.iquestgroup.remotelearning.week8.w8p3.generator.TrainGeneratorImpl;
 import com.iquestgroup.remotelearning.week8.w8p3.models.Train;
-import com.iquestgroup.remotelearning.week8.w8p3.models.TrainGenerator;
+import com.iquestgroup.remotelearning.week8.w8p3.generator.TrainGenerator;
 import java.util.HashSet;
 import java.util.Set;
 import org.junit.Before;
@@ -50,7 +50,7 @@ public class TrainSetTest {
   }
 
   private void initData() {
-    TrainGenerator trainGenerator = new TrainGeneratorImpl();
+    TrainGenerator trainGenerator = new TrainGeneratorImpl(VALID_RANDOM_SEED);
     TrainSetFiller trainSetFiller = new TrainSetFiller();
     trains = (HashSet<Train>) trainSetFiller.fillTrainSet(trainGenerator, NUMBER_OF_TRAINS_GENERATED);
   }

@@ -15,10 +15,12 @@ import org.junit.Test;
 public class DeckOfCardsShufflerTest {
 
   public static final DeckOfCards UNSHUFFLED_DECK;
+  public static final int VALID_RANDOM_SEED;
 
   static {
     UNSHUFFLED_DECK = new DeckOfCards();
     UNSHUFFLED_DECK.fill();
+    VALID_RANDOM_SEED = 39;
   }
 
   private DeckOfCardsShuffler deckOfCardsShuffler;
@@ -51,6 +53,6 @@ public class DeckOfCardsShufflerTest {
   private void initData() {
     DeckOfCards deckOfCards = new DeckOfCards();
     deckOfCards.fill();
-    deckOfCardsShuffler = new DeckOfCardsShuffler(deckOfCards);
+    deckOfCardsShuffler = new DeckOfCardsShuffler(deckOfCards, VALID_RANDOM_SEED);
   }
 }

@@ -1,7 +1,7 @@
 package com.iquestgroup.remotelearning.week8.w8p3.filler;
 
+import com.iquestgroup.remotelearning.week8.w8p3.generator.TrainGenerator;
 import com.iquestgroup.remotelearning.week8.w8p3.models.Train;
-import com.iquestgroup.remotelearning.week8.w8p3.models.TrainGenerator;
 import java.util.HashSet;
 import java.util.Set;
 

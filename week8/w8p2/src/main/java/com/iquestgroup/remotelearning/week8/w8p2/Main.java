@@ -16,7 +16,7 @@ public class Main {
       System.out.println(card);
     }
 
-    DeckOfCardsShuffler deckOfCardsShuffler = new DeckOfCardsShuffler(deckOfCards);
+    DeckOfCardsShuffler deckOfCardsShuffler = new DeckOfCardsShuffler(deckOfCards, 39);
     deckOfCardsShuffler.shuffle();
     Card[] shuffledCards = deckOfCardsShuffler.getDeckOfCards().getCards();
 

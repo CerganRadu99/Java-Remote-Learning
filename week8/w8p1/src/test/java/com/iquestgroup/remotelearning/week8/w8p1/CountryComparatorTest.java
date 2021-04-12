@@ -2,11 +2,11 @@ package com.iquestgroup.remotelearning.week8.w8p1;
 
 import static org.junit.Assert.assertEquals;
 
-import com.iquestgroup.remotelearning.week8.w8p1.filler.CountryListFiller;
-import com.iquestgroup.remotelearning.week8.w8p1.comparator.CountryComparator;
+import com.iquestgroup.remotelearning.week8.w8p1.generator.CountryGenerator;
 import com.iquestgroup.remotelearning.week8.w8p1.generator.CountryGeneratorImpl;
+import com.iquestgroup.remotelearning.week8.w8p1.comparator.CountryComparator;
+import com.iquestgroup.remotelearning.week8.w8p1.filler.CountryListFiller;
 import com.iquestgroup.remotelearning.week8.w8p1.models.Country;
-import com.iquestgroup.remotelearning.week8.w8p1.models.CountryGenerator;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -55,9 +55,9 @@ public class CountryComparatorTest {
 
   @BeforeClass
   public static void beforeTests() {
-    CountryGenerator countryGenerator = new CountryGeneratorImpl();
+    CountryGenerator countryGenerator = new CountryGeneratorImpl(VALID_RANDOM_SEED);
     CountryListFiller countryListFiller = new CountryListFiller();
-    countriesArrayList = (ArrayList<Country>)countryListFiller.fillCountryList(countryGenerator, 10);
+    countriesArrayList = (ArrayList<Country>) countryListFiller.fillCountryList(countryGenerator, 10);
   }
 
   @Test

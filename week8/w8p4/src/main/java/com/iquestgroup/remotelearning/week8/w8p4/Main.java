@@ -13,13 +13,16 @@ import java.util.List;
 
 public class Main {
 
+  public static final int KEY_GENERATOR_RANDOM_SEED = 1;
+  public static final int DAY_GENERATOR_RANDOM_SEED = 39;
+  public static final int VALUE_GENERATOR_RANDOM_SEED = 30;
   public static final int TRAIN_NUMBER = 9321;
   public static final String TRAIN_TYPE = "Rapid Transit";
   public static final int NO_WAGONS = 2;
 
   public static void main(String[] args) {
-    TrainGenerator trainGenerator = new KeyGenerator();
-    DayListGenerator runningDaysGenerator = new ValueGenerator(new DayGeneratorImpl());
+    TrainGenerator trainGenerator = new KeyGenerator(KEY_GENERATOR_RANDOM_SEED);
+    DayListGenerator runningDaysGenerator = new ValueGenerator(new DayGeneratorImpl(DAY_GENERATOR_RANDOM_SEED), VALUE_GENERATOR_RANDOM_SEED);
     TrainScheduleFiller trainScheduleFiller = new TrainScheduleFiller();
     HashMap<Train, List<Day>> trainsSchedule = (HashMap<Train, List<Day>>) trainScheduleFiller
         .fillTrainsSchedule(trainGenerator, runningDaysGenerator, 10000);

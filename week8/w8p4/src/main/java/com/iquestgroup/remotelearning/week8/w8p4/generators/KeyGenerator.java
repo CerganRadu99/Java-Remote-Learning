@@ -6,8 +6,6 @@ import java.util.Random;
 
 public class KeyGenerator implements TrainGenerator {
 
-  private static final int RANDOM_SEED = 1;
-  private static final Random random = new Random(RANDOM_SEED);
   private static final String[] TRAIN_TYPES;
   private static final int[] NUMBER_OF_WAGONS;
 
@@ -16,7 +14,12 @@ public class KeyGenerator implements TrainGenerator {
     NUMBER_OF_WAGONS = new int[]{3, 2, 4, 5};
   }
 
+  private final Random random;
   private int trainNumber = 0;
+
+  public KeyGenerator(int randomSeed) {
+    random = new Random(randomSeed);
+  }
 
   @Override
   public Train next() {

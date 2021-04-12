@@ -9,13 +9,13 @@ import java.util.Random;
 
 public class ValueGenerator implements DayListGenerator {
 
-  private static final int RANDOM_SEED = 30;
   private static final int MAX_RUNNING_DAYS = 10;
-  private static final Random random = new Random(RANDOM_SEED);
+  private final Random random;
   private final DayGenerator dayGenerator;
 
-  public ValueGenerator(DayGenerator dayGenerator) {
+  public ValueGenerator(DayGenerator dayGenerator, int randomSeed) {
     this.dayGenerator = dayGenerator;
+    random = new Random(randomSeed);
   }
 
   @Override

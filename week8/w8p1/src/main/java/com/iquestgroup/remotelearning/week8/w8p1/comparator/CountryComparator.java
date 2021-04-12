@@ -1,4 +1,4 @@
-package com.iquestgroup.remotelearning.week8.w8p1.generator;
+package com.iquestgroup.remotelearning.week8.w8p1.comparator;
 
 import com.iquestgroup.remotelearning.week8.w8p1.models.Country;
 import java.util.Comparator;

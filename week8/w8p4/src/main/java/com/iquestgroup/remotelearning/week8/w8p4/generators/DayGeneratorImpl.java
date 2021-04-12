@@ -6,14 +6,18 @@ import java.util.Random;
 
 public class DayGeneratorImpl implements DayGenerator {
 
-  private static final int RANDOM_SEED = 39;
-  private static final Random random = new Random(RANDOM_SEED);
   private static final int[] DAYS_OF_MONTH;
   private static final int[] MONTHS_OF_YEAR;
 
   static {
     DAYS_OF_MONTH = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31};
     MONTHS_OF_YEAR = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
+  }
+
+  private final Random random;
+
+  public DayGeneratorImpl(int randomSeed) {
+    random = new Random(randomSeed);
   }
 
   @Override
