@@ -1,4 +1,4 @@
-package com.iquestgroup.remotelearning.week10.w10p1;
+package com.iquestgroup.remotelearning.week10.w10p1.models;
 
 import java.util.Queue;
 

@@ -1,5 +1,7 @@
 package com.iquestgroup.remotelearning.week10.w10p1;
 
+import com.iquestgroup.remotelearning.week10.w10p1.models.Consumer;
+import com.iquestgroup.remotelearning.week10.w10p1.models.Producer;
 import java.util.LinkedList;
 import java.util.Queue;
 
