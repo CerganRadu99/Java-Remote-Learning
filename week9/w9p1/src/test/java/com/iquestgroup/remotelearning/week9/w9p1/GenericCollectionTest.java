@@ -14,7 +14,7 @@ public class GenericCollectionTest {
   public static final Collection<String> STRING_COLLECTION_TEST;
   public static final Collection<Integer> INTEGER_COLLECTION_TEST;
 
-  static{
+  static {
     STRING_COLLECTION_TEST = new ArrayList<>(Arrays.asList("string1", "string2", "string3"));
     INTEGER_COLLECTION_TEST = new HashSet<>(Arrays.asList(99, -13, 22));
   }
@@ -23,7 +23,7 @@ public class GenericCollectionTest {
   private MyCollection<Integer> integerCollection;
 
   @Before
-  public void setup(){
+  public void setup() {
     initData();
   }
 
@@ -49,7 +49,7 @@ public class GenericCollectionTest {
     assertTrue(integerCollection.addAll(INTEGER_COLLECTION_TEST));
   }
 
-  private void initData(){
+  private void initData() {
     stringCollection = new StringCollection();
     integerCollection = new IntegerCollection();
   }
