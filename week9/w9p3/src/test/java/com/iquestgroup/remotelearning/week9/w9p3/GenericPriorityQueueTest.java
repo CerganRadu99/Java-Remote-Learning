@@ -4,6 +4,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import com.iquestgroup.remotelearning.week9.w9p3.exceptions.GenericPriorityQueueEmptyException;
+import com.iquestgroup.remotelearning.week9.w9p3.exceptions.GenericPriorityQueueFullException;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -15,7 +17,28 @@ public class GenericPriorityQueueTest {
 
   @Before
   public void setup() {
-    genericPriorityQueue = new GenericPriorityQueue<>();
+    genericPriorityQueue = new GenericPriorityQueue<>(NUMBER_OF_ELEMENTS);
+  }
+
+  @Test(expected = GenericPriorityQueueFullException.class)
+  public void testInsertInPriorityQueueWhenIsFull() {
+    insert();
+    genericPriorityQueue.insert(19);
+  }
+
+  @Test(expected = GenericPriorityQueueEmptyException.class)
+  public void testReturnHeadOfPriorityQueueWhenIsEmpty() {
+    genericPriorityQueue.head();
+  }
+
+  @Test(expected = GenericPriorityQueueEmptyException.class)
+  public void testRemoveFromPriorityQueueWhenIsEmpty() {
+    genericPriorityQueue.remove();
+  }
+
+  @Test(expected = GenericPriorityQueueEmptyException.class)
+  public void testClearPriorityQueueWhenAlreadyEmpty() {
+    genericPriorityQueue.clear();
   }
 
   @Test

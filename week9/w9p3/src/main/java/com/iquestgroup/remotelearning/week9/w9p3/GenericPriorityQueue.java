@@ -1,13 +1,17 @@
 package com.iquestgroup.remotelearning.week9.w9p3;
 
+import com.iquestgroup.remotelearning.week9.w9p3.exceptions.GenericPriorityQueueEmptyException;
+import com.iquestgroup.remotelearning.week9.w9p3.exceptions.GenericPriorityQueueFullException;
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class GenericPriorityQueue<E extends Comparable<E>> implements Comparable<GenericPriorityQueue<E>> {
 
+  private static final String PQ_FULL_EXCEPTION_MESSAGE = "Priority queue is full!";
+  private static final String PQ_EMPTY_EXCEPTION_MESSAGE = "Priority queue is empty!";
   private static final int DEFAULT_INITIAL_CAPACITY = 10000;
   private final ArrayList<E> queue;
-  private int size;
+  private final int maxSize;
+  private int currentIndex;
 
   public GenericPriorityQueue() {
     this(DEFAULT_INITIAL_CAPACITY);
@@ -17,22 +21,29 @@ public class GenericPriorityQueue<E extends Comparable<E>> implements Comparable
     if (maxSize < 1) {
       throw new IllegalArgumentException();
     }
-    this.queue = new ArrayList<>(maxSize);
-    this.size = -1;
+    this.maxSize = maxSize;
+    this.queue = new ArrayList<>();
+    this.currentIndex = -1;
   }
 
   public void insert(E e) {
+    if (queue.size() == maxSize) {
+      throw new GenericPriorityQueueFullException(PQ_FULL_EXCEPTION_MESSAGE);
+    }
     queue.add(e);
-    size = size + 1;
+    currentIndex = currentIndex + 1;
 
-    shiftUp(size);
+    shiftUp(currentIndex);
   }
 
   public E remove() {
+    if (isEmpty()) {
+      throw new GenericPriorityQueueEmptyException(PQ_EMPTY_EXCEPTION_MESSAGE);
+    }
     E result = queue.get(0);
 
-    queue.set(0, queue.get(size));
-    size = size - 1;
+    queue.set(0, queue.get(currentIndex));
+    currentIndex = currentIndex - 1;
 
     shiftDown(0);
     queue.remove(queue.size() - 1);
@@ -40,10 +51,16 @@ public class GenericPriorityQueue<E extends Comparable<E>> implements Comparable
   }
 
   public void clear() {
+    if (isEmpty()) {
+      throw new GenericPriorityQueueEmptyException(PQ_EMPTY_EXCEPTION_MESSAGE);
+    }
     queue.clear();
   }
 
   public E head() {
+    if (isEmpty()) {
+      throw new GenericPriorityQueueEmptyException(PQ_EMPTY_EXCEPTION_MESSAGE);
+    }
     return queue.get(0);
   }
 
@@ -56,61 +73,44 @@ public class GenericPriorityQueue<E extends Comparable<E>> implements Comparable
     return this.head().compareTo(genericPriorityQueue.head());
   }
 
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
-    }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
-    }
-    GenericPriorityQueue<?> that = (GenericPriorityQueue<?>) o;
-    return size == that.size && Objects.equals(queue, that.queue);
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(queue, size);
-  }
-
-  private void shiftUp(int i) {
-    while (i > 0 && queue.get(parent(i)).compareTo(queue.get(i)) < 0) {
-      swap(parent(i), i);
-      i = parent(i);
+  private void shiftUp(int positionToShift) {
+    while (positionToShift > 0 && queue.get(getParentIndex(positionToShift)).compareTo(queue.get(positionToShift)) < 0) {
+      swap(getParentIndex(positionToShift), positionToShift);
+      positionToShift = getParentIndex(positionToShift);
     }
   }
 
-  private void shiftDown(int i) {
-    int maxIndex = i;
-    int l = leftChild(i);
-    if (l <= size && queue.get(l).compareTo(queue.get(maxIndex)) > 0) {
-      maxIndex = l;
+  private void shiftDown(int positionToShift) {
+    int maxIndex = positionToShift;
+    int leftChildIndex = getLeftChildIndex(positionToShift);
+    if (leftChildIndex <= currentIndex && queue.get(leftChildIndex).compareTo(queue.get(maxIndex)) > 0) {
+      maxIndex = leftChildIndex;
     }
-    int r = rightChild(i);
-    if (r <= size && queue.get(r).compareTo(queue.get(maxIndex)) > 0) {
-      maxIndex = r;
+    int rightChildIndex = getRightChildIndex(positionToShift);
+    if (rightChildIndex <= currentIndex && queue.get(rightChildIndex).compareTo(queue.get(maxIndex)) > 0) {
+      maxIndex = rightChildIndex;
     }
-    if (i != maxIndex) {
-      swap(i, maxIndex);
+    if (positionToShift != maxIndex) {
+      swap(positionToShift, maxIndex);
       shiftDown(maxIndex);
     }
   }
 
-  private int parent(int i) {
+  private int getParentIndex(int i) {
     return (i - 1) / 2;
   }
 
-  private int leftChild(int i) {
+  private int getLeftChildIndex(int i) {
     return ((2 * i) + 1);
   }
 
-  private int rightChild(int i) {
+  private int getRightChildIndex(int i) {
     return ((2 * i) + 2);
   }
 
-  private void swap(int i, int j) {
-    E temp = queue.get(i);
-    queue.set(i, queue.get(j));
-    queue.set(j, temp);
+  private void swap(int parentIndex, int childIndex) {
+    E objectToMove = queue.get(parentIndex);
+    queue.set(parentIndex, queue.get(childIndex));
+    queue.set(childIndex, objectToMove);
   }
 }
