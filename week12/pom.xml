@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <artifactId>java-remote-learning</artifactId>
+    <groupId>com.iquestgroup.remotelearning</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.iquestgroup.remotelearning.week12</groupId>
+  <artifactId>week12</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0-SNAPSHOT</version>
+
+  <modules>
+    <module>w12p2</module>
+    <module>w12p3</module>
+    <module>w12p1</module>
+  </modules>
+
+  <name>week12</name>
+  <!-- FIXME change it to the project's website -->
+  <url>http://www.example.com</url>
+</project>
