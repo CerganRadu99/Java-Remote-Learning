@@ -25,6 +25,6 @@ public class ThreadRelayRaceTeam implements Runnable {
         Thread.currentThread().interrupt();
       }
     }
-    context.teamFinished(name);
+    context.registerTeam(name);
   }
 }

@@ -15,16 +15,22 @@ public class ThreadRelayRace implements Runnable {
   public void run() {
     List<Thread> teams = new ArrayList<>();
     TeamGenerator teamGenerator = new TeamGeneratorImpl();
-    for (int i = 0; i < NUMBER_OF_TEAMS; i++) {
+    for (int teamsIterator = 0; teamsIterator < NUMBER_OF_TEAMS; teamsIterator++) {
       List<Thread> competitors = new ArrayList<>();
       String currentTeamName = teamGenerator.next();
-      for (int j = 0; j < NUMBER_OF_COMPETITORS; j++) {
-        competitors.add(new Thread(new ThreadRaceCompetitor(j, currentTeamName, context)));
+      for (int idOfCompetitor = 0; idOfCompetitor < NUMBER_OF_COMPETITORS; idOfCompetitor++) {
+        competitors.add(new Thread(new ThreadRaceCompetitor(idOfCompetitor, currentTeamName, context)));
       }
       Thread currentTeam = new Thread(new ThreadRelayRaceTeam(currentTeamName, context, competitors));
       teams.add(currentTeam);
       currentTeam.start();
     }
+    registerForResults(teams);
+    context.listTeamsPositions();
+    context.listCompetitorsPositions();
+  }
+
+  private void registerForResults(List<Thread> teams) {
     for (int i = 0; i < NUMBER_OF_TEAMS; i++) {
       try {
         teams.get(i).join();
@@ -33,7 +39,5 @@ public class ThreadRelayRace implements Runnable {
         Thread.currentThread().interrupt();
       }
     }
-    context.listTeamsPositions();
-    context.listCompetitorsPositions();
   }
 }

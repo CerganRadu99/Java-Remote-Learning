@@ -10,23 +10,23 @@ public class ThreadRaceContext {
   private int competitorPosition = 0;
   private int teamPosition = 0;
 
-  public synchronized void competitorFinished(int id, String teamName) {
+  public synchronized void registerCompetitor(int id, String teamName) {
     competitorsRanking.put(teamName + " " + id, ++competitorPosition);
   }
 
-  public synchronized void teamFinished(String teamName) {
+  public synchronized void registerTeam(String teamName) {
     teamsRanking.put(teamName, ++teamPosition);
   }
 
   public void listCompetitorsPositions() {
-    for (Map.Entry<String, Integer> currentEntry : competitorsRanking.entrySet()) {
-      System.out.println("Competitor " + currentEntry.getKey() + " finished on position: " + currentEntry.getValue());
+    for (Map.Entry<String, Integer> currentCompetitorRanking : competitorsRanking.entrySet()) {
+      System.out.println("Competitor " + currentCompetitorRanking.getKey() + " finished on position: " + currentCompetitorRanking.getValue());
     }
   }
 
   public void listTeamsPositions() {
-    for (Map.Entry<String, Integer> currentEntry : teamsRanking.entrySet()) {
-      System.out.println("Team " + currentEntry.getKey() + " finished on position: " + currentEntry.getValue());
+    for (Map.Entry<String, Integer> currentTeamRanking : teamsRanking.entrySet()) {
+      System.out.println("Team " + currentTeamRanking.getKey() + " finished on position: " + currentTeamRanking.getValue());
     }
   }
 
