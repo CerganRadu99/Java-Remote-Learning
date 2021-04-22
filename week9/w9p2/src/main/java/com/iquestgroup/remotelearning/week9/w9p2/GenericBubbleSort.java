@@ -7,10 +7,10 @@ import java.util.List;
 public class GenericBubbleSort {
 
   public <T extends Comparable<T>> T[] sort(T[] array) {
-    for (int i = 0; i < array.length - 1; i++) {
-      for (int j = 0; j < array.length - i - 1; j++) {
-        if (array[j].compareTo(array[j + 1]) > 0) {
-          changePositionFromArray(array, j);
+    for (int iterator = 0; iterator < array.length - 1; iterator++) {
+      for (int indexFirstElementToCompare = 0; indexFirstElementToCompare < array.length - iterator - 1; indexFirstElementToCompare++) {
+        if (array[indexFirstElementToCompare].compareTo(array[indexFirstElementToCompare + 1]) > 0) {
+          changePositionFromArray(array, indexFirstElementToCompare);
         }
       }
     }
@@ -19,10 +19,10 @@ public class GenericBubbleSort {
 
   public <T extends Comparable<T>> Collection<T> sort(Collection<T> collection) {
     List<T> listToSort = new ArrayList<>(collection);
-    for (int i = 0; i < listToSort.size() - 1; i++) {
-      for (int j = 0; j < listToSort.size() - i - 1; j++) {
-        if (listToSort.get(j).compareTo(listToSort.get(j + 1)) > 0) {
-          changePositionFromCollection(listToSort, j);
+    for (int iterator = 0; iterator < listToSort.size() - 1; iterator++) {
+      for (int indexFirstElementToCompare = 0; indexFirstElementToCompare < listToSort.size() - iterator - 1; indexFirstElementToCompare++) {
+        if (listToSort.get(indexFirstElementToCompare).compareTo(listToSort.get(indexFirstElementToCompare + 1)) > 0) {
+          changePositionFromCollection(listToSort, indexFirstElementToCompare);
         }
       }
     }
