@@ -13,6 +13,9 @@ public class GenericPriorityQueueTest {
 
   public static final int HEAD_OF_PRIORITY_QUEUE = 33;
   public static final int NUMBER_OF_ELEMENTS = 3;
+  public static final int FIRST_NUMBER_TO_INSERT = 19;
+  public static final int SECOND_NUMBER_TO_INSERT = 33;
+  public static final int THIRD_NUMBER_TO_INSERT = 15;
   private GenericPriorityQueue<Integer> genericPriorityQueue;
 
   @Before
@@ -23,7 +26,7 @@ public class GenericPriorityQueueTest {
   @Test(expected = GenericPriorityQueueFullException.class)
   public void testInsertInPriorityQueueWhenIsFull() {
     insert();
-    genericPriorityQueue.insert(19);
+    genericPriorityQueue.insert(FIRST_NUMBER_TO_INSERT);
   }
 
   @Test(expected = GenericPriorityQueueEmptyException.class)
@@ -74,13 +77,13 @@ public class GenericPriorityQueueTest {
   }
 
   private void insert() {
-    genericPriorityQueue.insert(15);
-    genericPriorityQueue.insert(33);
-    genericPriorityQueue.insert(19);
+    genericPriorityQueue.insert(FIRST_NUMBER_TO_INSERT);
+    genericPriorityQueue.insert(SECOND_NUMBER_TO_INSERT);
+    genericPriorityQueue.insert(THIRD_NUMBER_TO_INSERT);
   }
 
   private void removeAllElements() {
-    for (int i = 0; i < NUMBER_OF_ELEMENTS; i++) {
+    for (int iterator = 0; iterator < NUMBER_OF_ELEMENTS; iterator++) {
       genericPriorityQueue.remove();
     }
   }

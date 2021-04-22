@@ -9,6 +9,8 @@ public class GenericPriorityQueue<E extends Comparable<E>> implements Comparable
   private static final String PQ_FULL_EXCEPTION_MESSAGE = "Priority queue is full!";
   private static final String PQ_EMPTY_EXCEPTION_MESSAGE = "Priority queue is empty!";
   private static final int DEFAULT_INITIAL_CAPACITY = 10000;
+  private static final int INDEX_FIRST_ELEMENT = 0;
+  private static final int MINIMUM_QUEUE_CAPACITY = 1;
   private final ArrayList<E> queue;
   private final int maxSize;
   private int currentIndex;
@@ -18,7 +20,7 @@ public class GenericPriorityQueue<E extends Comparable<E>> implements Comparable
   }
 
   public GenericPriorityQueue(int maxSize) {
-    if (maxSize < 1) {
+    if (maxSize < MINIMUM_QUEUE_CAPACITY) {
       throw new IllegalArgumentException();
     }
     this.maxSize = maxSize;
@@ -26,11 +28,11 @@ public class GenericPriorityQueue<E extends Comparable<E>> implements Comparable
     this.currentIndex = -1;
   }
 
-  public void insert(E e) {
+  public void insert(E element) {
     if (queue.size() == maxSize) {
       throw new GenericPriorityQueueFullException(PQ_FULL_EXCEPTION_MESSAGE);
     }
-    queue.add(e);
+    queue.add(element);
     currentIndex = currentIndex + 1;
 
     shiftUp(currentIndex);
@@ -40,12 +42,12 @@ public class GenericPriorityQueue<E extends Comparable<E>> implements Comparable
     if (isEmpty()) {
       throw new GenericPriorityQueueEmptyException(PQ_EMPTY_EXCEPTION_MESSAGE);
     }
-    E result = queue.get(0);
+    E result = queue.get(INDEX_FIRST_ELEMENT);
 
-    queue.set(0, queue.get(currentIndex));
+    queue.set(INDEX_FIRST_ELEMENT, queue.get(currentIndex));
     currentIndex = currentIndex - 1;
 
-    shiftDown(0);
+    shiftDown(INDEX_FIRST_ELEMENT);
     queue.remove(queue.size() - 1);
     return result;
   }
@@ -61,7 +63,7 @@ public class GenericPriorityQueue<E extends Comparable<E>> implements Comparable
     if (isEmpty()) {
       throw new GenericPriorityQueueEmptyException(PQ_EMPTY_EXCEPTION_MESSAGE);
     }
-    return queue.get(0);
+    return queue.get(INDEX_FIRST_ELEMENT);
   }
 
   public boolean isEmpty() {
@@ -96,16 +98,16 @@ public class GenericPriorityQueue<E extends Comparable<E>> implements Comparable
     }
   }
 
-  private int getParentIndex(int i) {
-    return (i - 1) / 2;
+  private int getParentIndex(int indexElement) {
+    return (indexElement - 1) / 2;
   }
 
-  private int getLeftChildIndex(int i) {
-    return ((2 * i) + 1);
+  private int getLeftChildIndex(int indexElement) {
+    return ((2 * indexElement) + 1);
   }
 
-  private int getRightChildIndex(int i) {
-    return ((2 * i) + 2);
+  private int getRightChildIndex(int indexElement) {
+    return ((2 * indexElement) + 2);
   }
 
   private void swap(int parentIndex, int childIndex) {
