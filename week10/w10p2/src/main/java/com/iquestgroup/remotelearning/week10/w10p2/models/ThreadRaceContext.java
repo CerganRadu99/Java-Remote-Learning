@@ -8,7 +8,7 @@ public class ThreadRaceContext {
   private final Map<Integer, Integer> ranking = new LinkedHashMap<>();
   private int competitorPosition = 0;
 
-  public synchronized void competitorFinished(int id) {
+  public synchronized void registerCompetitor(int id) {
     ranking.put(id, ++competitorPosition);
   }
 

@@ -11,19 +11,23 @@ public class ThreadRace implements Runnable {
   @Override
   public void run() {
     List<Thread> competitors = new ArrayList<>();
-    for (int i = 0; i < NUMBER_OF_COMPETITORS; i++) {
-      Thread currentCompetitor = new Thread(new ThreadRaceCompetitor(i, context));
+    for (int idOfCompetitor = 0; idOfCompetitor < NUMBER_OF_COMPETITORS; idOfCompetitor++) {
+      Thread currentCompetitor = new Thread(new ThreadRaceCompetitor(idOfCompetitor, context));
       competitors.add(currentCompetitor);
       currentCompetitor.start();
     }
-    for (int i = 0; i < NUMBER_OF_COMPETITORS; i++) {
+    registerForResults(competitors);
+    context.listFinalRankings();
+  }
+
+  private void registerForResults(List<Thread> competitors){
+    for (int idOfCompetitor = 0; idOfCompetitor < NUMBER_OF_COMPETITORS; idOfCompetitor++) {
       try {
-        competitors.get(i).join();
+        competitors.get(idOfCompetitor).join();
       } catch (InterruptedException exception) {
         exception.printStackTrace();
         Thread.currentThread().interrupt();
       }
     }
-    context.listFinalRankings();
   }
 }
