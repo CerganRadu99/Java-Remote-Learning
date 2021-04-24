@@ -1,5 +1,6 @@
 package com.iquestgroup.remotelearning.week12.w12p1.models;
 
+import com.iquestgroup.remotelearning.week12.w12p1.exception.TranscoderException;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -20,7 +21,7 @@ public abstract class Transcoder {
       }
       fileWriter.close();
     } catch (IOException exception) {
-      throw new RuntimeException();
+      throw new TranscoderException("IOException was thrown!");
     }
   }
 }
