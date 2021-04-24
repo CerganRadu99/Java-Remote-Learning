@@ -11,8 +11,10 @@ import org.junit.Test;
 public class FileCompressorTest {
 
   public static final String FILE_VALID_PATH = "src/test/resources/fileToCompress.txt";
+  public static final String ARCHIVE_VALID_PATH = "src/test/resources/fileToCompress.zip";
   public static final String FILE_INVALID_PATH = "src/main/resources/fileToCompress.txt";
   public static final String DIRECTORY_NAME = "src/test/resources";
+  public static final double COMPRESSION_RATIO = 0.027299060771864118;
   public static final int NUMBER_OF_ZIP_FILES = 1;
   public static final String ZIP_EXTENSION = "zip";
   private FileCompressor fileCompressor;
@@ -36,6 +38,15 @@ public class FileCompressorTest {
     fileCompressor.zipFile(FILE_INVALID_PATH);
   }
 
+  @Test
+  public void testCompressionRatio(){
+    fileCompressor.zipFile(FILE_VALID_PATH);
+    File txtFile = new File(FILE_VALID_PATH);
+    File zipFile = new File(ARCHIVE_VALID_PATH);
+    double actualCompressionRatio = (double)zipFile.length() / txtFile.length();
+    assertEquals(COMPRESSION_RATIO, actualCompressionRatio, 0);
+  }
+  
   private void initData() {
     fileCompressor = new FileCompressor();
   }

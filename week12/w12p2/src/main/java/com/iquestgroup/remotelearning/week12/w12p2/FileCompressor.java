@@ -32,7 +32,6 @@ public class FileCompressor {
       zipOutputStream.write(bytes, FIRST_INDEX, bytes.length);
       zipOutputStream.closeEntry();
       zipOutputStream.close();
-      System.out.println(checksum.getChecksum().getValue());
     } catch (IOException exception) {
       throw new InvalidPathException("The path is not a valid one or file does not exist!");
     }
