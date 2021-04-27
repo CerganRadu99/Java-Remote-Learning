@@ -30,6 +30,7 @@
     <module>week9</module>
     <module>week10</module>
     <module>week12</module>
+    <module>week13</module>
 
   </modules>
   <dependencies>
