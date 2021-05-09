@@ -4,16 +4,19 @@ import static org.hamcrest.Matchers.greaterThan;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 
+import com.iquestgroup.remotelearning.week13.w13p1.exception.DatabaseAccessDataFileNotFoundException;
 import com.iquestgroup.remotelearning.week13.w13p1.exception.DatabaseException;
-import com.iquestgroup.remotelearning.week13.w13p1.generator.ClientGenerator;
-import com.iquestgroup.remotelearning.week13.w13p1.generator.Generator;
 import com.iquestgroup.remotelearning.week13.w13p1.models.Client;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -21,49 +24,54 @@ import org.junit.Test;
 public class ClientDaoTest {
 
   public static final int PREPARED_STATEMENT_FIRST_PARAMETER = 1;
-  public static final int PREPARED_STATEMENT_SECOND_PARAMETER = 2;
-  public static final int PREPARED_STATEMENT_THIRD_PARAMETER = 3;
   public static final String USERNAME_FIELD = "username";
   public static final double BALANCE = 100.000;
   public static final int NUMBER_OF_CLIENTS = 10;
   public static final int NUMBER_OF_RICH_CLIENTS = 4;
   public static final String SELECT_STATEMENT = "SELECT USERNAME FROM CLIENT WHERE BALANCE = ?";
-  public static final String INSERT_STATEMENT = "INSERT INTO CLIENT VALUES(?, ?, ?)";
-  public static final String DRIVER_PATH = "com.mysql.cj.jdbc.Driver";
-  public static final String URL = "jdbc:mysql://localhost:3306/mydb";
-  public static final String USER = "test";
-  public static final String PASSWORD = "test";
   public static final String USERNAME_TO_FIND = "mk13wer";
   public static final String INVALID_USERNAME = "cfg13wa";
   public static final double VALID_BALANCE = 97.14;
   public static final double INVALID_BALANCE = 0;
+  public static final String FILE_PATH = "src/test/resources/DatabaseAccessData.txt";
+  public static final int DRIVER_PATH_INDEX = 0;
+  public static final int URL_INDEX = 1;
+  public static final int USER_INDEX = 2;
+  public static final int PASSWORD_INDEX = 3;
+  public static final String DATABASE_ACCESS_DATA_EXCEPTION_MESSAGE = "File not found!";
+  public static final String STRING_DELIMITER = "-";
+  public static String driverPath;
+  public static String url;
+  public static String user;
+  public static String password;
   private static Connection databaseConnection;
   private ClientDao databaseHandler;
 
   @BeforeClass
   public static void beforeClassSetup() {
-    try {
-      Class.forName(DRIVER_PATH);
-      databaseConnection = DriverManager.getConnection(URL, USER, PASSWORD);
-    } catch (ClassNotFoundException | SQLException exception) {
-      exception.printStackTrace();
-    }
-    populateDatabase();
+    readDatabaseAccessData();
   }
 
-  private static void populateDatabase() {
-    Generator clientGenerator = new ClientGenerator();
+  private static void readDatabaseAccessData() {
+    List<String> databaseAccessData = new ArrayList<>();
+    File databaseAccessDataFile = new File(FILE_PATH);
     try {
-      PreparedStatement preparedStatement = databaseConnection.prepareStatement(INSERT_STATEMENT);
-      for (int index = 0; index < NUMBER_OF_CLIENTS; index++) {
-        preparedStatement.setInt(PREPARED_STATEMENT_FIRST_PARAMETER, clientGenerator.getId());
-        preparedStatement.setString(PREPARED_STATEMENT_SECOND_PARAMETER, clientGenerator.getUsername());
-        preparedStatement.setDouble(PREPARED_STATEMENT_THIRD_PARAMETER, clientGenerator.getBalance());
-        preparedStatement.executeUpdate();
+      Scanner fileReader = new Scanner(databaseAccessDataFile);
+      while (fileReader.hasNextLine()) {
+        String currentData = fileReader.nextLine();
+        databaseAccessData.add(currentData.substring(currentData.lastIndexOf(STRING_DELIMITER) + 1));
       }
-    } catch (SQLException exception) {
-      System.out.println("Entities are already inserted into database!!!");
+      setDatabaseAccesData(databaseAccessData);
+    } catch (FileNotFoundException exception) {
+      throw new DatabaseAccessDataFileNotFoundException(DATABASE_ACCESS_DATA_EXCEPTION_MESSAGE);
     }
+  }
+
+  private static void setDatabaseAccesData(List<String> databaseAccessData) {
+    driverPath = databaseAccessData.get(DRIVER_PATH_INDEX);
+    url = databaseAccessData.get(URL_INDEX);
+    user = databaseAccessData.get(USER_INDEX);
+    password = databaseAccessData.get(PASSWORD_INDEX);
   }
 
   @Before
@@ -105,7 +113,7 @@ public class ClientDaoTest {
   @Test
   public void testGetBalanceOfClientByUsernameInvalidUsername() {
     try {
-      databaseConnection = DriverManager.getConnection(URL, USER, PASSWORD);
+      databaseConnection = DriverManager.getConnection(url, user, password);
     } catch (SQLException exception) {
       exception.printStackTrace();
     }
@@ -149,8 +157,8 @@ public class ClientDaoTest {
 
   private void initData() {
     try {
-      Class.forName(DRIVER_PATH);
-      databaseConnection = DriverManager.getConnection(URL, USER, PASSWORD);
+      Class.forName(driverPath);
+      databaseConnection = DriverManager.getConnection(url, user, password);
     } catch (ClassNotFoundException | SQLException exception) {
       exception.printStackTrace();
     }
