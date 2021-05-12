@@ -17,8 +17,6 @@
   </properties>
 
   <modules>
-
-
     <module>week1</module>
     <module>week2</module>
     <module>week3</module>
@@ -32,8 +30,9 @@
     <module>week12</module>
     <module>week13</module>
     <module>week14</module>
-
+    <module>week15</module>
   </modules>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
