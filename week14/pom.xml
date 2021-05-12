@@ -17,6 +17,9 @@
 
   <modules>
     <module>w14p1</module>
+    <module>w14p2</module>
+    <module>w14p4</module>
+    <module>w14p3</module>
   </modules>
 
   <name>week14</name>
