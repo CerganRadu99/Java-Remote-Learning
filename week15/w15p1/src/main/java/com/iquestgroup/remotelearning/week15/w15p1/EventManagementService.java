@@ -1,97 +1,88 @@
 package com.iquestgroup.remotelearning.week15.w15p1;
 
-import java.time.LocalDate;
+import com.iquestgroup.remotelearning.week15.w15p1.exception.EventManagementException;
+import java.time.DateTimeException;
+import java.time.DayOfWeek;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeParseException;
 import java.util.List;
+import java.util.Scanner;
 
 public class EventManagementService {
 
   private final EventDao eventDao;
+  private final Scanner input = new Scanner(System.in);
+  private static final String EXCEPTION_MESSAGE = "Wrong input format!";
 
   public EventManagementService(EventDao eventDao) {
     this.eventDao = eventDao;
   }
 
-  public void addEvent(Event newEvent) {
+  public void addEvent() {
+    System.out.println("Summary: ");
+    String summary = input.nextLine();
+    System.out.println("Start Date Time: ");
+    ZonedDateTime startTime = getDate();
+    System.out.println("End Date Time: ");
+    ZonedDateTime endTime = getDate();
+    System.out.println("Location: ");
+    String location = input.nextLine();
+    Event newEvent = new Event(startTime, endTime, summary, location);
     eventDao.addEvent(newEvent);
   }
 
   public void listNextWeekendEvents() {
-    List<Event> allEvents = getAllEvents();
-    LocalDate currentDate = LocalDate.now();
-    String currentDayOfWeek = currentDate.getDayOfWeek().toString();
-    String currentDateAsString = currentDate.toString();
-    for (Event event : allEvents) {
-      String startDateTime = event.getStartDateTime();
-      String eventDate = startDateTime.substring(0, startDateTime.lastIndexOf(" "));
-      if (checkIfEventTakesPlaceNextWeekend(eventDate, currentDateAsString, currentDayOfWeek)) {
-        System.out.println("Summary: " + event.getSummary());
-        System.out.println("Start Date Time: " + event.getStartDateTime());
-        System.out.println("End Date Time: " + event.getEndDateTime());
-        System.out.println("Location: " + event.getLocation());
-        System.out.println();
+    ZonedDateTime localTime = ZonedDateTime.now();
+    int distanceToWeekend = localTime.getDayOfWeek().getValue() - DayOfWeek.FRIDAY.getValue();
+    if(distanceToWeekend < 0){
+      distanceToWeekend = -distanceToWeekend;
+    }
+    ZonedDateTime nextWeekend = localTime.withDayOfMonth(localTime.getDayOfMonth() + distanceToWeekend);
+    printEventsInInterval(nextWeekend, nextWeekend.plusDays(2));
+  }
+
+  public void listEventsFromDate() {
+    System.out.println("Date: ");
+    ZonedDateTime date = getDate();
+    System.out.println("Time Zone: ");
+    ZoneId zoneId = getZoneId();
+    ZonedDateTime dateWithZone = date.withZoneSameInstant(zoneId);
+    printEventsInInterval(dateWithZone, dateWithZone);
+  }
+
+  public void listEventsFromInterval() {
+    System.out.println("Start time: ");
+    ZonedDateTime startTime = getDate();
+    System.out.println("End time: ");
+    ZonedDateTime endTime = getDate();
+    printEventsInInterval(startTime, endTime);
+  }
+
+  private void printEventsInInterval(ZonedDateTime startTime, ZonedDateTime endTime){
+    List<Event> allEvents = eventDao.getAllEvents();
+    for(Event event : allEvents){
+      if(startTime.isBefore(event.getStartDateTime()) && event.getEndDateTime().isBefore(endTime)){
+        System.out.println(event);
       }
     }
   }
 
-  private boolean checkIfEventTakesPlaceNextWeekend(String eventDate, String actualDate, String actualDayOfWeek) {
-    String currentYear = getYear(actualDate);
-    String currentMonth = getMonth(actualDate);
-    String currentDay = getDay(actualDate);
-
-    String eventYear = getYear(eventDate);
-    String eventMonth = getMonth(eventDate);
-    String eventDay = getDay(eventDate);
-
-    if (currentYear.equals(eventYear) && currentMonth.equals(eventMonth)) {
-      int numberOfDaysUntilWeekend = getNumberOfDaysUntilWeekend(actualDayOfWeek);
-      int eventDayAsInt = Integer.parseInt(eventDay);
-      int firstWeekendDayAsInt = Integer.parseInt(currentDay) + numberOfDaysUntilWeekend;
-      int secondWeekendDayAsInt = Integer.parseInt(currentDay) + numberOfDaysUntilWeekend + 1;
-      return eventDayAsInt == firstWeekendDayAsInt || eventDayAsInt == secondWeekendDayAsInt ? true : false;
-    }
-    return false;
-  }
-
-  private String getYear(String actualDate) {
-    return actualDate.substring(0, actualDate.indexOf("-"));
-  }
-
-  private String getMonth(String actualDate) {
-    return actualDate.substring(actualDate.indexOf("-") + 1, actualDate.lastIndexOf("-"));
-  }
-
-  private String getDay(String actualDate) {
-    return actualDate.substring(actualDate.lastIndexOf("-") + 1);
-  }
-
-  private int getNumberOfDaysUntilWeekend(String dayOfWeek) {
-    switch (dayOfWeek) {
-      case ("MONDAY"):
-        return 5;
-      case ("TUESDAY"):
-        return 4;
-      case ("WEDNESDAY"):
-        return 3;
-      case ("THURSDAY"):
-        return 2;
-      case ("FRIDAY"):
-        return 1;
-      default:
-        return -1;
+  private ZonedDateTime getDate(){
+    try{
+      ZonedDateTime date = ZonedDateTime.parse(input.nextLine());
+      return date;
+    } catch(DateTimeParseException exception){
+      throw new EventManagementException(EXCEPTION_MESSAGE);
     }
   }
 
-  /*public void listEventsFromDate(LocalDate date, ZoneId timeZone) {
-    List<Event> allEvents = getAllEvents();
-
-  }
-
-  public void listEventsFromInterval() {
-    List<Event> allEvents = getAllEvents();
-
-  }*/
-
-  public List<Event> getAllEvents() {
-    return eventDao.getAllEvents();
+  private ZoneId getZoneId(){
+    try{
+      ZoneId zoneId = ZoneId.of(input.nextLine());
+      return zoneId;
+    } catch(DateTimeException exception){
+      throw new EventManagementException(EXCEPTION_MESSAGE);
+    }
   }
 }

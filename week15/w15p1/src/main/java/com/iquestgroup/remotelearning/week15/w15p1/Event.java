@@ -1,30 +1,26 @@
 package com.iquestgroup.remotelearning.week15.w15p1;
 
+import java.time.ZonedDateTime;
+
 public class Event {
 
-  private final int id;
-  private final String startDateTime;
-  private final String endDateTime;
+  private final ZonedDateTime startDateTime;
+  private final ZonedDateTime endDateTime;
   private final String summary;
   private final String location;
 
-  public Event(int id, String startDateTime, String endDateTime, String summary, String location) {
-    this.id = id;
+  public Event(ZonedDateTime startDateTime, ZonedDateTime endDateTime, String summary, String location) {
     this.startDateTime = startDateTime;
     this.endDateTime = endDateTime;
     this.summary = summary;
     this.location = location;
   }
 
-  public int getId() {
-    return id;
-  }
-
-  public String getStartDateTime() {
+  public ZonedDateTime getStartDateTime() {
     return startDateTime;
   }
 
-  public String getEndDateTime() {
+  public ZonedDateTime getEndDateTime() {
     return endDateTime;
   }
 
@@ -34,5 +30,15 @@ public class Event {
 
   public String getLocation() {
     return location;
+  }
+
+  @Override
+  public String toString() {
+    return "Event{" +
+        "startDateTime=" + startDateTime +
+        ", endDateTime=" + endDateTime +
+        ", summary='" + summary + '\'' +
+        ", location='" + location + '\'' +
+        '}';
   }
 }

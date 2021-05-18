@@ -3,7 +3,6 @@ package com.iquestgroup.remotelearning.week15.w15p1;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.List;
 
 public class Main {
 
@@ -18,13 +17,10 @@ public class Main {
       Connection databaseConnection = DriverManager.getConnection(URL, USER, PASSWORD);
       EventDao eventDao = new EventDao(databaseConnection);
       EventManagementService eventManagementService = new EventManagementService(eventDao);
-      eventManagementService.addEvent(new Event(6, "2018-04-25 15:30:00", "2018-04-25 17:00:00", "Remote Learning meeting", "Somesului nr 14"));
-      List<Event> events = eventManagementService.getAllEvents();
-
-      for (Event event : events) {
-        System.out.println(event.toString());
-      }
+      eventManagementService.addEvent();
       eventManagementService.listNextWeekendEvents();
+      eventManagementService.listEventsFromDate();
+      eventManagementService.listEventsFromInterval();
     } catch (ClassNotFoundException | SQLException exception) {
       exception.printStackTrace();
     }
